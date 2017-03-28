@@ -1,0 +1,31 @@
+/*----------------------------------------------------------------------*/
+/*----------------more specific styling of the portfolio---------------*/
+/*---------------------------------------------------------------------*/
+
+.page{
+    height: 100vh;
+    width: 100vw;
+}
+
+#home-section{
+    background:url('../images/backgrounds/stars.png')no-repeat center center fixed;
+}
+
+#app-section{
+    background:url('../images/backgrounds/galaxy3.jpg')no-repeat center center fixed;
+}
+
+#skill-section{
+    background:url('../images/backgrounds/stars_inverse.jpg')no-repeat center center fixed;
+}
+
+#contact-section{
+    background:url('../images/backgrounds/stars2.png')no-repeat center center fixed;
+}
+
+#skills-area{
+    height: 500px;
+    background-color: white;
+}
+
+

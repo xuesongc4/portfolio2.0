@@ -1,0 +1,56 @@
+/*----------------------------------------------------------------------*/
+/*this is where the broad styling/formatting of the website takes place*/
+/*---------------------------------------------------------------------*/
+body{
+    margin: 0;
+    font-size: 0;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a:link,a:visited,a:active {
+    text-decoration: none;
+    color: black;
+}
+
+
+.container{
+    width: 1200px;
+    margin: auto;
+}
+
+#home-nav{
+    height: 50px;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+#home-nav .nav-buttons ul{
+    list-style-type: none;
+    float: right;
+    margin: 0 !important;
+}
+
+#home-nav .nav-buttons ul li{
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 20px;
+    vertical-align: middle;
+}
+.logo-container{
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+}
+
+.nav-buttons{
+    display: inline-block;
+    width: 74%;
+}
+
+.logo{
+    letter-spacing: -6px;
+}
+.logo-c{
+    font-size: 41px;
+}
