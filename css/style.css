@@ -20,12 +20,35 @@
 }
 
 #contact-section{
-    background:url('../images/backgrounds/stars2.png')no-repeat center center fixed;
+    background:url('../images/backgrounds/stars2.png')no-repeat center center;
 }
 
 #skills-area{
     height: 500px;
     background-color: white;
 }
+#home-section .title{
+    color: #A42327;
+    font-weight: 700;
+    position: absolute;
+}
+#home-section .me{
+    font-size: 65px;
+    letter-spacing: -3px;
+    bottom: 400px;
+    right:500px;
+}
 
+#home-section .profession{
+    font-size: 35px;
+    bottom: 325px;
+    right:350px;
+}
 
+#typed_intro{
+    font-size: 25px;
+    line-height: 40px;
+    font-weight: 400;
+    position: absolute;
+    top: 200px;
+}

@@ -8,30 +8,39 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
-a:link,a:visited,a:active {
+#home-nav a:link, #home-nav a:visited, #home-nav a:active {
     text-decoration: none;
     color: black;
+    transition-duration: .5s;
 }
 
+#pop-nav a:link, #pop-nav a:visited, #pop-nav a:active {
+    text-decoration: none;
+    color: white;
+    transition-duration: .5s;
+}
+#pop-nav a:hover, #home-nav a:hover{
+    color:#A42327;
+}
 
 .container{
     width: 1200px;
     margin: auto;
 }
 
-#home-nav{
-    height: 50px;
+#home-nav, #pop-nav{
+    height: 55px;
     font-size: 40px;
     font-weight: 600;
 }
 
-#home-nav .nav-buttons ul{
+#home-nav .nav-buttons ul , #pop-nav .nav-buttons ul{
     list-style-type: none;
     float: right;
     margin: 0 !important;
 }
 
-#home-nav .nav-buttons ul li{
+#home-nav .nav-buttons ul li, #pop-nav .nav-buttons ul li{
     display: inline-block;
     margin: 0 15px;
     font-size: 20px;
@@ -53,4 +62,39 @@ a:link,a:visited,a:active {
 }
 .logo-c{
     font-size: 41px;
+}
+
+#pop-nav{
+    color:white;
+    background: black;
+    position: fixed;
+    width: 100%;
+    top:-70px;
+    transition-duration: .5s;
+}
+
+.slidedown{
+    top:0 !important;
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }
