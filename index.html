@@ -14,6 +14,7 @@
     <script src="jquery/jquery-3.2.0.min.js"></script>
     <script src="js/nav.js"></script>
     <script src="js/typed.js"></script>
+    <script src="js/cube.js"></script>
 
 </head>
 <body>
@@ -93,10 +94,14 @@
     <div id="app-section" class="page">
         <!------------------------------------------------------apps animation----------------------->
         <div class ="container">
+            <h2 class="page_title">Applications</h2>
+        </div>
+
+        <div class ="container">
             <div class="cube">
-                <div class="container2">
-                    <div id="cube" class="rotate cube_transform">
-                        <figure class="front cube_border">
+                <div class="cube_container">
+                    <div id="cube" class="rotate">
+                        <figure onclick="highlight(1)" class="front cube_border">
                             <div class="cube_font">
                                 iBet
                             </div>
@@ -107,7 +112,7 @@
                                 </video>
                             </div>
                         </figure>
-                        <figure class="right cube_border">
+                        <figure onclick="highlight(2)" class="right cube_border">
                             <div class="cube_font">
                                 Moduulis.com
                             </div>
@@ -118,7 +123,7 @@
                                 </video>
                             </div>
                         </figure>
-                        <figure class="back cube_border">
+                        <figure onclick="highlight(3)" class="back cube_border">
                             <div class="cube_font">
                                 Tic-Tac-REMIX!
                             </div>
@@ -129,7 +134,7 @@
                                 </video>
                             </div>
                         </figure>
-                        <figure class="left cube_border">
+                        <figure onclick="highlight(4)" class="left cube_border">
                             <div class="cube_font">
                                 Student Grade Table
                             </div>
