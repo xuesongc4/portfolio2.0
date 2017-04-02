@@ -46,4 +46,9 @@ function highlight(side){
             left.addClass("highlight zoom_left");
         },zoomDelay);
     }
+    highlight_info();
+}
+
+function highlight_info(){
+    $("#info").slideToggle();
 }

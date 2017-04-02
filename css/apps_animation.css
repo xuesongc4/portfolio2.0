@@ -140,3 +140,48 @@
 .zoom_left{
     transform: rotateY(-90deg) translateZ(400px) !important;
 }
+
+#info {
+    border: white 5px solid;
+    border-radius: 40px 0 40px 40px;
+    background: rgba(255,255,255,.3);
+    height: 600px;
+    width: 400px;
+    position: absolute;
+    right: 0;
+    margin-top: -110px;
+    font-size: 20px;
+    display: none;
+}
+
+#close_out_container{
+    border: solid white 3px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: url("../images/backgrounds/galaxy3.jpg")no-repeat center center fixed;
+    position: relative;
+    top: -35px;
+    right: -368px;
+    display: inline-block;
+    transition-duration: .5s;
+}
+#close_out{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    color: white;
+    font-weight: 900;
+    font-size: 40px;
+    transition-duration: .5s;
+}
+
+#close_out:hover{
+    cursor: pointer;
+    background-color: rgba(255,255,255,.3);
+}
+#close_out_container:hover{
+    box-shadow: 0 0 20px 5px white;
+}
