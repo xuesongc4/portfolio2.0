@@ -8,6 +8,18 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+h2{
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0;
+}
+.page_title{
+    text-align: center;
+    position: relative;
+    top: 100px;
+}
+
 #home-nav a:link, #home-nav a:visited, #home-nav a:active {
     text-decoration: none;
     color: black;
