@@ -28,7 +28,7 @@
     color: deepskyblue;
     width: 220px;
     height: 220px;
-    transition-duration: .5s;
+    transition-duration: .8s;
 }
 
 #cube .back {
@@ -36,7 +36,7 @@
     color: red;
     width: 220px;
     height: 220px;
-    transition-duration: .5s;
+    transition-duration: .8s;
 }
 
 #cube .right {
@@ -45,7 +45,7 @@
     letter-spacing: -2px;
     width: 220px;
     height: 220px;
-    transition-duration: .5s;
+    transition-duration: .8s;
 }
 
 #cube .left {
@@ -53,7 +53,7 @@
     color: white;
     width: 220px;
     height: 220px;
-    transition-duration: .5s;
+    transition-duration: .8s;
 }
 
 
@@ -109,6 +109,8 @@
     text-align: center;
     overflow: hidden;
     background-color: rgba(0,0,0,.6);
+    border: 2px solid white;
+    border-radius: 10px;
 }
 
 .rotate {
@@ -139,4 +141,87 @@
 }
 .zoom_left{
     transform: rotateY(-90deg) translateZ(400px) !important;
+}
+
+#info {
+    border: white 5px solid;
+    border-radius: 40px 0 40px 40px;
+    background: rgba(255,255,255,.3);
+    height: 460px;
+    width: 400px;
+    position: absolute;
+    right: 0;
+    margin-top: -110px;
+    font-size: 20px;
+    display: none;
+}
+
+#close_out_container{
+    border: solid white 3px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: url("../images/backgrounds/galaxy3.jpg")no-repeat center center fixed;
+    position: relative;
+    top: -35px;
+    right: -368px;
+    display: inline-block;
+    transition-duration: .5s;
+}
+#close_out{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    color: white;
+    font-weight: 900;
+    font-size: 40px;
+    transition-duration: .5s;
+}
+
+#close_out:hover{
+    cursor: pointer;
+    background-color: rgba(255,255,255,.3);
+}
+#close_out_container:hover{
+    box-shadow: 0 0 20px 5px white;
+}
+
+#info .info_content{
+    padding: 0 20px;
+    margin-top: -70px;
+}
+.tracker_container .tracker{
+    position: absolute;
+    bottom: 20px;
+    left: 21%;
+    width: 220px;
+}
+
+.side1, .side2, .side3, .side4{
+    display: none;
+}
+
+.side1_bubble, .side2_bubble, .side3_bubble, .side4_bubble{
+    display: inline-block;
+    margin: 0 15px;
+}
+.bubble{
+    border: 2px solid white;
+    box-sizing: border-box;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    transition-duration: .3s;
+}
+.bubble:hover{
+    cursor: pointer;
+    background-color: rgba(255,255,255,.6);
+}
+.bubble_highlight{
+    border-width: 4px;
+    box-shadow: 0 0 20px 5px white;
+    background-color: rgba(255,255,255,.9);
+    pointer-events: none;
 }

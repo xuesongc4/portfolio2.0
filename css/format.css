@@ -14,14 +14,23 @@ h2{
     font-weight: 700;
     margin: 0;
 }
+h4{
+    margin: 20px 0;
+    font-size: 35px;
+}
+
 .page_title{
     text-align: center;
     position: relative;
     top: 100px;
 }
 
-#home-nav a:link, #home-nav a:visited, #home-nav a:active {
+a:link, a:visited, a:active{
     text-decoration: none;
+    color: white;
+}
+
+#home-nav a:link, #home-nav a:visited, #home-nav a:active {
     color: black;
     transition-duration: .5s;
 }
@@ -110,4 +119,31 @@ h2{
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
+}
+
+.relative{
+    position: relative;
+}
+
+.button{
+    padding: 10px 30px;
+    margin: 30px 10px;
+    transition-duration: .5s;
+    text-align: center;
+    border-radius: 3px;
+}
+
+
+
+.link, .github{
+    background: black;
+    transition-duration: .2s;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.link:hover{
+    background: #A42327;
+}
+.github:hover{
+    background: #77AF5B;
 }
