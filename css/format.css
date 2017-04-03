@@ -130,10 +130,8 @@ a:link, a:visited, a:active{
     margin: 30px 10px;
     transition-duration: .5s;
     text-align: center;
-    border-radius: 3px;
+    border-radius: 5px;
 }
-
-
 
 .link, .github{
     background: black;
@@ -143,7 +141,44 @@ a:link, a:visited, a:active{
 }
 .link:hover{
     background: #A42327;
+    box-shadow: 0 0 20px 5px white;
 }
 .github:hover{
     background: #77AF5B;
+    box-shadow: 0 0 20px 5px white;
+}
+
+footer{
+    color: white;
+    background-color: #111111;
+    margin-top: -20px;
+    height: 120px;
+    font-size: 25px;
+}
+
+.black{
+    color: black;
+}
+
+footer .container .row ul li{
+    display: inline-block;
+    margin: 0 10px;
+}
+footer .container .row ul li a{
+    transition-duration: .3s;
+}
+
+footer .container .row ul li a:hover{
+    color: #A42327;
+}
+
+footer .container .row{
+    padding-top: 15px;
+}
+
+footer .container .row ul li.resume{
+    font-weight: 700;
+}
+
+#contact-section{
 }

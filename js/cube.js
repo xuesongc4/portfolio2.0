@@ -39,33 +39,33 @@ function highlight(side){
     if(side == 1){
         cube.addClass("show-front");
         side1.fadeIn();
+        $(".side1_bubble").addClass('bubble_highlight');
         setTimeout(function(){
             front.addClass("highlight zoom_front");
-            $(".side1_bubble").addClass('bubble_highlight');
         },zoomDelay);
     }
     else if(side == 2){
         cube.addClass("show-right");
         side2.fadeIn();
+        $(".side2_bubble").addClass('bubble_highlight');
         setTimeout(function(){
             right.addClass("highlight zoom_right");
-            $(".side2_bubble").addClass('bubble_highlight');
         },zoomDelay);
     }
     else if(side == 3){
         cube.addClass("show-back");
         side3.fadeIn();
+        $(".side3_bubble").addClass('bubble_highlight');
         setTimeout(function(){
             back.addClass("highlight zoom_back");
-            $(".side3_bubble").addClass('bubble_highlight');
         },zoomDelay);
     }
     else{
         cube.addClass("show-left");
         side4.fadeIn();
+        $(".side4_bubble").addClass('bubble_highlight');
         setTimeout(function(){
             left.addClass("highlight zoom_left");
-            $(".side4_bubble").addClass('bubble_highlight');
         },zoomDelay);
     }
     highlight_info(side);

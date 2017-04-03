@@ -145,6 +145,7 @@
 
 #info {
     border: white 5px solid;
+    box-sizing: border-box;
     border-radius: 40px 0 40px 40px;
     background: rgba(255,255,255,.3);
     height: 460px;
@@ -157,14 +158,14 @@
 }
 
 #close_out_container{
-    border: solid white 3px;
+    border: solid white 5px;
     border-radius: 50%;
     width: 60px;
     height: 60px;
     background: url("../images/backgrounds/galaxy3.jpg")no-repeat center center fixed;
     position: relative;
-    top: -35px;
-    right: -368px;
+    top: -37px;
+    right: -356px;
     display: inline-block;
     transition-duration: .5s;
 }
@@ -178,14 +179,16 @@
     font-weight: 900;
     font-size: 40px;
     transition-duration: .5s;
+    background-color: rgba(255,255,255,.3);
 }
 
 #close_out:hover{
-    cursor: pointer;
-    background-color: rgba(255,255,255,.3);
+    background-color: rgba(255,255,255,.5);
 }
+
 #close_out_container:hover{
     box-shadow: 0 0 20px 5px white;
+    cursor: pointer;
 }
 
 #info .info_content{
