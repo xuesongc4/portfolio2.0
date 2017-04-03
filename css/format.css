@@ -149,6 +149,36 @@ a:link, a:visited, a:active{
 }
 
 footer{
+    color: white;
     background-color: #111111;
     margin-top: -20px;
+    height: 120px;
+    font-size: 25px;
+}
+
+.black{
+    color: black;
+}
+
+footer .container .row ul li{
+    display: inline-block;
+    margin: 0 10px;
+}
+footer .container .row ul li a{
+    transition-duration: .3s;
+}
+
+footer .container .row ul li a:hover{
+    color: #A42327;
+}
+
+footer .container .row{
+    padding-top: 15px;
+}
+
+footer .container .row ul li.resume{
+    font-weight: 700;
+}
+
+#contact-section{
 }
