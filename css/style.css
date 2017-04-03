@@ -16,17 +16,13 @@
 }
 
 #skill-section{
-    background:url('../images/backgrounds/stars_inverse.jpg')no-repeat center center fixed;
+    background:url('../images/backgrounds/stars2.png')no-repeat center center;
 }
 
 #contact-section{
     background:url('../images/backgrounds/stars2.png')no-repeat center center;
 }
 
-#skills-area{
-    height: 500px;
-    background-color: white;
-}
 #home-section .title{
     color: #A42327;
     font-weight: 700;

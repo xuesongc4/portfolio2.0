@@ -130,7 +130,7 @@ a:link, a:visited, a:active{
     margin: 30px 10px;
     transition-duration: .5s;
     text-align: center;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 .link, .github{
@@ -141,7 +141,14 @@ a:link, a:visited, a:active{
 }
 .link:hover{
     background: #A42327;
+    box-shadow: 0 0 20px 5px white;
 }
 .github:hover{
     background: #77AF5B;
+    box-shadow: 0 0 20px 5px white;
+}
+
+footer{
+    background-color: #111111;
+    margin-top: -20px;
 }

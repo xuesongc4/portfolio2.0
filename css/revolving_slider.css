@@ -1,0 +1,17 @@
+/*-----------------------------css for revolving slider skills page*/
+
+#skills-area{
+    height: 400px;
+    background-color: rgba(255,255,255,0);
+    position: relative;
+    top: 130px
+}
+
+#skills-area .skills-container{
+    width: 50%;
+    height: 100%;
+}
+
+#skills-area .skills-container .skills_bg{
+
+}
