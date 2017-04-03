@@ -133,8 +133,6 @@ a:link, a:visited, a:active{
     border-radius: 3px;
 }
 
-
-
 .link, .github{
     background: black;
     transition-duration: .2s;
