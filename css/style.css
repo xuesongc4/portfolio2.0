@@ -48,3 +48,11 @@
     position: absolute;
     top: 190px;
 }
+
+.click-me{
+    position: relative;
+    bottom: -400px;
+    left: 380px;
+    color: rgba(255,255,255,.6);
+    font-size: 18px;
+}

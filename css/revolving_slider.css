@@ -19,3 +19,44 @@
     height: 100%;
     background-color: #7BC7CD;
 }
+
+.skills_picture_container .logo_img{
+    height: 100px;
+    width: 100px;
+    transition-duration: .5s;
+    border-radius: 50%;
+    position: relative;
+    top:20px;
+    right: 20px;
+    z-index: 1;
+}
+
+.skills_picture_container .logo_img:hover{
+    height: 125px;
+    width: 125px;
+    box-shadow: 0 0 10px 10px rgba(255,255,255,.3);
+    z-index: 5;
+    background: rgba(255,255,255,.3);
+}
+
+.skills_bg{
+    display: inline-block;
+    height: 100%;
+    width: 50%;
+}
+.skills_picture_container{
+    display: inline-block;
+    height: 100%;
+    width: 50%;
+    vertical-align: top;
+}
+
+#skills-area .skills_picture{
+    height: 400px;
+    width: 400px;
+    position: relative;
+    top:0;
+    left:100px;
+    border-radius: 50%;
+    border:blue 2px solid;
+}

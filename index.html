@@ -17,8 +17,9 @@
     <script src="js/nav.js"></script>
     <script src="js/typed.js"></script>
     <script src="js/cube.js"></script>
+    <script src="js/slider.js"></script>
 
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 </head>
 <body>
 <div id="home-section" class="page">
@@ -241,22 +242,41 @@
         </div>
     </div>
     <!----------------------------------------------------end of apps animation----------------------->
+    <div class="click-me">
+        <h3>Click on Applications for more info...</h3>
+    </div>
 </div>
+
 <div id="skill-section" class="page">
     <div class="container">
         <h2 class="page_title black">Tech Skills</h2>
     </div>
+
+    <!-- ---------------------------------------------------slider ----------------------->
     <div id="skills-area">
         <div class="skills-container">
             <div class="skills_bg">
                 <div class="skills_info">
                 </div>
             </div>
-            <div class="skills_picture">
+            <div class="skills_picture_container">
+                <div class="skills_picture">
+                    <img id="angular" class="logo_img" src="images/logo/angularjs.png" onload="populate(this,2)">
+                    <img id="javascript" class="logo_img" src="images/logo/javascript.png" onload="populate(this,1)">
+                    <img id="html5" class="logo_img" src="images/logo/HTML5.png" onload="populate(this,2)">
+                    <img id="css3" class="logo_img" src="images/logo/css3.png" onload="populate(this,3)">
+                    <img id="jquery" class="logo_img" src="images/logo/jquery.png" onload="populate(this,3)">
+                    <img id="php" class="logo_img" src="images/logo/php.png" onload="populate(this,4)">
+                    <img id="bootstrap" class="logo_img" src="images/logo/bootstrap.png" onload="populate(this,4)">
+                    <img id="wordpress" class="logo_img" src="images/logo/wordpress.png" onload="populate(this,1)">
+                    <img id="firebase" class="logo_img" src="images/logo/firebase.png" onload="populate(this,5)">
+                </div>
             </div>
         </div>
     </div>
+    <!--------------------------------------------------------end slider------------------------->
 </div>
+
 <div id="contact-section" class="page">
 </div>
 <footer>
