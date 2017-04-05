@@ -1,5 +1,7 @@
 //-------------------- js for the navigation bar
-$(document).ready(navSlide());
+$(document).ready(function(){
+    navSlide();
+});
 
 function navSlide(){
 
@@ -18,5 +20,5 @@ $(document).on('click', '.scroll', function(event){
 
     $('html, body').animate({
         scrollTop: $( $.attr(this, 'href') ).offset().top
-    }, 1000);
+    }, 2000);
 });
