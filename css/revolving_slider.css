@@ -1,11 +1,10 @@
 /*-----------------------------css for revolving slider skills page*/
 
 #skills-area{
-    height: 400px;
+    height: 550px;
     background-color: rgba(255,255,255,0);
     position: relative;
     top: 120px;
-    border: red 2px solid;
 }
 
 #skills-area .skills-container{
@@ -21,21 +20,18 @@
 }
 
 .skills_picture_container .logo_img{
-    height: 100px;
-    width: 100px;
-    transition-duration: .5s;
     border-radius: 50%;
-    position: relative;
+    position: absolute;
     top:20px;
     right: 20px;
     z-index: 1;
+    transition-duration: .5s;
 }
 
 .skills_picture_container .logo_img:hover{
-    height: 125px;
-    width: 125px;
-    box-shadow: 0 0 10px 10px rgba(255,255,255,.3);
-    z-index: 5;
+    transform:scale(1.3);
+    box-shadow: 0 0 15px 10px rgba(255,255,255,.3);
+    z-index: 20 !important;
     background: rgba(255,255,255,.3);
 }
 
@@ -49,14 +45,17 @@
     height: 100%;
     width: 50%;
     vertical-align: top;
+    background-color: black;
 }
 
-#skills-area .skills_picture{
+#skills-area .skills_circle{
     height: 400px;
     width: 400px;
     position: relative;
     top:0;
     left:100px;
-    border-radius: 50%;
-    border:blue 2px solid;
+}
+
+.hide_logo{
+    display: none;
 }

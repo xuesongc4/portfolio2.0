@@ -8,15 +8,15 @@
 }
 
 #home-section{
-    background:url('../images/backgrounds/stars.png')no-repeat center center fixed;
+    background:url('../images/backgrounds/stars.png')no-repeat bottom center fixed;
 }
 
 #app-section{
-    background:url('../images/backgrounds/galaxy3.jpg')no-repeat center center fixed;
+    background:url('../images/backgrounds/galaxy3.jpg')no-repeat bottom center fixed;
 }
 
 #skill-section{
-    background:url('../images/backgrounds/stars_middle.jpg')no-repeat center center fixed;
+    background:url('../images/backgrounds/stars_middle3.png')no-repeat bottom center fixed;
 }
 
 #contact-section{
