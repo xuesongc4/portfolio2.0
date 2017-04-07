@@ -130,24 +130,28 @@ a:link, a:visited, a:active{
     margin: 30px 10px;
     transition-duration: .5s;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 8px;
+    border: solid 2px white;
+    opacity: .7;
 }
 
-.link, .github{
-    background: black;
+.github{
+    background: #77AF5B;
     transition-duration: .2s;
     font-size: 12px;
     text-transform: uppercase;
 }
-.link:hover{
+.link{
     background: #A42327;
-    box-shadow: 0 0 20px 5px white;
-}
-.github:hover{
-    background: #77AF5B;
-    box-shadow: 0 0 20px 5px white;
+    transition-duration: .2s;
+    font-size: 12px;
+    text-transform: uppercase;
 }
 
+.link:hover, .github:hover{
+    box-shadow: 0 0 20px 5px white;
+    opacity: 1;
+}
 footer{
     color: white;
     background-color: #111111;
