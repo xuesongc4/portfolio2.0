@@ -4,6 +4,7 @@
     height: 550px;
     position: relative;
     top: 120px;
+
 }
 
 #skills-area .skills-container{
@@ -74,7 +75,6 @@
     height: 100%;
     width: 50%;
     vertical-align: top;
-    background-color: black;
     position: absolute;
     top: 0;
     right: 0;
@@ -87,6 +87,7 @@
     text-align: center;
     position: relative;
     transition-duration: 1s;
+    transform-style: preserve-3d;
 }
 
 .skills-container .logo_column img{
@@ -110,7 +111,7 @@
     color: white;
 }
 
-.logo_column.hover{
+.logo_column .front_side.hover{
     transform: scale(1.2); !important;
     box-shadow: 0 0 15px 3px white;
     z-index: 1;
@@ -120,14 +121,39 @@
     height: 33.333%;
 }
 
-.skills-container .odd{
+.skills-container .odd .front_side{
     background-color: #A42327;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
 }
 
-.skills-container .even{
+
+.skills-container .even .front_side{
     background-color: #EA6C7C;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+
+.skills-container .back_side{
+    background-color: #B1E9E7;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    transform: rotateX(180deg);
 }
 
 .logo_column.transform{
     transform: rotateX(540deg);
+}
+.zindex{
+    z-index: 10;
 }

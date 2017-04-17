@@ -29,8 +29,9 @@ function create_board(rows, columns) {
             else {
                 $('.logo_row' + i).append("<div class='logo_column odd position" + logo_counter + "'></div>");
             }
-            $('.position' + logo_counter).append("<div class='front_side_position" + logo_counter + "'>");
-            $('.front_side_position' + logo_counter).append("<img src='images/logo_white/" + logo_array[logo_counter] + ".png'>");
+            $('.logo_column.position' + logo_counter).append("<div class='front_side position"+logo_counter+" fposition" + logo_counter + "'>");
+            $('.logo_column.position' + logo_counter).append("<div class='back_side position"+logo_counter+" bposition" + logo_counter + "'>");
+            $('.fposition' + logo_counter).append("<img src='images/logo_white/" + logo_array[logo_counter] + ".png'>");
 
             if(logo_counter <8){
                 $('.skills_info ul.col1').append("<li class='position"+logo_counter+"'>" + logo_array[logo_counter] + "</li>");
@@ -51,31 +52,36 @@ function create_board2(){
 
 function hover_effect() {
     var li = $('.skills_info ul li');
-    var logo = $('.logo_column');
+    var logo = $('.front_side');
 
     li.mouseover(function () {
+        console.log(this.className);
         $(this).css({
             'text-shadow': '5px 3px 20px white',
             'padding-left': '50px'});
-        $(".logo_column."+this.className).addClass("hover");
+        $(".f"+this.className).addClass("hover");
+        $(".f"+this.className).parent().addClass("zindex");
     });
     li.mouseout(function () {
         $(this).css({
             'text-shadow': 'none',
             'padding-left': '0'});
-        $(".logo_column."+this.className).removeClass("hover");
+        $(".f"+this.className).removeClass("hover");
+        $(".f"+this.className).parent().removeClass("zindex");
     });
 
     logo.mouseover(function () {
-        var temp_class = $(this).attr('class').split(' ')[2];
+        var temp_class = $(this).attr('class').split(' ')[1];
         $(this).addClass("hover");
+        $(this).parent().addClass("zindex");
         $("li."+temp_class).css({
             'text-shadow': '5px 3px 20px white',
             'padding-left': '50px'});
     });
     logo.mouseout(function () {
-        var temp_class = $(this).attr('class').split(' ')[2];
+        var temp_class = $(this).attr('class').split(' ')[1];
         $(this).removeClass("hover");
+        $(this).parent().removeClass("zindex");
         $("li."+temp_class).css({
             'text-shadow': 'none',
             'padding-left': '0'});
@@ -136,7 +142,7 @@ function flip(side){
 }
 
 function flip_action(square1,square2,flip){
-    var square = '.skills_picture_container .position'
+    var square = '.logo_column.position'
 
     setTimeout(function(){
         console.log("flipping time");
