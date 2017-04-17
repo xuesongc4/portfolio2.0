@@ -50,7 +50,7 @@
 
 #cube .left {
     transform: rotateY(-90deg) translateZ(220px);
-    color: white;
+    color: #ffff00;
     width: 220px;
     height: 220px;
     transition-duration: .8s;
@@ -94,9 +94,9 @@
 }
 
 .cube_video {
-    width: 146%;
-    margin-top: -30px;
-    margin-left:-55px;
+    width: 153%;
+    margin-top: -35px;
+    margin-left:-60px;
 }
 
 .video_container {
@@ -128,6 +128,8 @@
 
 .highlight{
     box-shadow: 0 0 80px 15px white;
+    cursor: auto;
+    pointer-events: none;
 }
 
 .zoom_front{

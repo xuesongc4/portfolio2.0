@@ -19,40 +19,57 @@
     background-color: #7BC7CD;
 }
 
-.skills_picture_container .logo_img{
-    border-radius: 50%;
-    position: absolute;
-    top:20px;
-    right: 20px;
-    z-index: 1;
-    transition-duration: .5s;
-}
-
-.skills_picture_container .logo_img:hover{
-    transform:scale(1.2);
-    z-index: 100 !important;
-}
-
 .skills_bg{
     display: inline-block;
     height: 100%;
     width: 50%;
 }
+.skills_bg .skills_info{
+    font-size: 24px;
+    color: white;
+    width:50%;
+    float: right;
+}
+.skills_bg .skills_info li{
+   padding-top: 5px;
+    cursor: pointer;
+}
+
+
 .skills_picture_container{
     display: inline-block;
     height: 100%;
     width: 50%;
     vertical-align: top;
-    background: url('../images/coding.jpeg') right center no-repeat;
-    overflow: hidden;
+    background-color: black;
 }
 
-#skills-area .skills_circle{
-    position: relative;
+.skills-container .logo_column{
+    width: 25%;
     height: 100%;
-    width: 100%;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+.skills-container .logo_column img{
+    margin-top: 10%;
 }
 
-.hide_logo{
-    display: none;
+.skills-container .logo_column:hover{
+    transform: scale(1.15);
+    box-shadow: 0 0 15px 3px white;
+    z-index: 1;
 }
+
+.skills-container .logo_row{
+    height: 33.333%;
+}
+
+.skills-container .odd{
+    background-color: #A42327;
+}
+
+.skills-container .even{
+    background-color: #EA6C7C;
+}
+
