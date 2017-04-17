@@ -2,83 +2,46 @@
  * Created by xueso on 3/27/2017.
  */
 var global_position = [];
-var logo_array = ['#html5', '#angular', '#javascript', '#css3', '#jquery', '#php', '#bootstrap', '#wordpress', '#firebase','#foundation',"#sass"];
-
-
+var logo_array = ['JavaScript', 'jQuery', 'HTML5', 'CSS3', 'Sass', 'WordPress', 'AngularJS', 'Foundation', 'Bootstrap', 'php', "Firebase", "MySQL"];
 $(document).ready(function () {
-    populate();
     shrinking_bg();
+    create_board(3, 4);
     if ($(window).scrollTop() > 1800) {
         $('#skill-section').css('background-size', "56.43%");
     }
+    hover_effect();
 });
 
-function populate() {
+function create_board(rows, columns) {
+    var logo_counter = 0;
+    var landing = $(".skills_picture_container");
 
-    function doScaledTimeout(i) {
-        setTimeout(function () {
-            assign_position(logo_array[i], i);
-        }, i * 300);
-    }
+    for (var i = 0; i < rows; i++) {
+        landing.append("<div class='logo_row logo_row" + i + "'></div>");
+        for (var j = 0; j < columns; j++) {
+            if ((i + j) % 2 == 0) {
+                $('.logo_row' + i).append("<div class='logo_column even position" + logo_counter + "'></div>");
+            }
+            else {
+                $('.logo_row' + i).append("<div class='logo_column odd position" + logo_counter + "'></div>");
+            }
+            $('.position' + logo_counter).append("<div class='front_side_position" + logo_counter + "'>");
+            $('.front_side_position' + logo_counter).append("<img src='images/logo_white/" + logo_array[logo_counter] + ".png'>");
 
-    for (i = 0; i < logo_array.length; i++) {
-        doScaledTimeout(i);
+            $('.skills_info ul').append("<li class='position"+logo_counter+"'>" + logo_array[logo_counter] + "</li>");
+            logo_counter++;
+        }
     }
 }
 
-function assign_position(sel, num) {
-    var margin = 5;
-    var go_flag = 0;
-    var logo = $(sel);
-    var size = random_size();
-    var position = random_position();
-
-    if (global_position.length != 0) {
-        for (j = 0; j < global_position.length; j++) {
-            if ((position[0] >= global_position[j][0] + margin || position[0] <= global_position[j][0] - margin) && (position[1] >= global_position[j][1] + margin || position[1] <= global_position[j][1] - margin)) {
-               go_flag++;
-            }
-        }
-        if(go_flag == global_position.length){
-            global_position.push(position);
-            logo.css({
-                'top': position[1] + "%",
-                'left': position[0] + "%",
-                'height': size,
-                'width': size,
-                'z-index': num
-            });
-            logo.parent().fadeIn();
-        }
-        else{
-            console.log("spot taken rerun...")
-            assign_position(sel, num);
-        }
-    }
-    if (global_position.length == 0) {
-        global_position.push(position);
-        logo.css({
-            'top': position[0] + "%",
-            'left': position[1] + "%",
-            'height': size,
-            'width': size,
-            'z-index': num
-        });
-        logo.parent().fadeIn();
-    }
-};
-
-
-function random_position() {
-    var result = [];
-    result[0] = Math.floor(Math.random() * 85)-5;
-    result[1] = Math.floor(Math.random() * 80)-5;
-    return result;
-};
-
-function random_size() {
-    var result = (Math.floor(Math.random() * 150) + 150);
-    return result;
+function hover_effect() {
+    var li = $('.skills_info ul li');
+    li.mouseover(function () {
+        $(this).css('text-shadow', '2px 2px 10px white');
+    });
+    li.mouseout(function () {
+        $(this).css('text-shadow', 'none');
+    });
 }
 
 function shrinking_bg() {
@@ -92,8 +55,4 @@ function shrinking_bg() {
     });
 };
 
-function regen(){
-    global_position=[];
-    populate();
-}
 
