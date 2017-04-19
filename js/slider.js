@@ -2,13 +2,15 @@
  * Created by xueso on 3/27/2017.
  */
 var logo_array = ['JavaScript', 'jQuery', 'HTML5', 'CSS3', 'Sass', 'WordPress', 'AngularJS', 'Foundation', 'Bootstrap', 'php', "Firebase", "MySQL"];
-var tools_array = ['Chrome DevTools ','GitHub','Bitbucket','git','PhpStorm'];
+var tools_array = ['Chrome DevTools', 'GitHub', 'Bitbucket', 'git', 'PhpStorm'];
+var tools_logo = ['phpstorm1','phpstorm2','phpstorm3','bita','github1a','github2a','chrome','bitb','github1b','github2b','git1','git2'];
 
 $(document).ready(function () {
     shrinking_bg();
     create_board(3, 4);
     create_board2();
     hover_effect();
+    hover_effect_back();
 
     if ($(window).scrollTop() > 1800) {
         $('#skill-section').css('background-size', "56.43%");
@@ -18,7 +20,7 @@ $(document).ready(function () {
 function create_board(rows, columns) {
 
     var landing = $(".skills_picture_container");
-    var logo_counter=0;
+    var logo_counter = 0;
 
     for (var i = 0; i < rows; i++) {
         landing.append("<div class='logo_row logo_row" + i + "'></div>");
@@ -29,23 +31,24 @@ function create_board(rows, columns) {
             else {
                 $('.logo_row' + i).append("<div class='logo_column odd position" + logo_counter + "'></div>");
             }
-            $('.logo_column.position' + logo_counter).append("<div class='front_side position"+logo_counter+" fposition" + logo_counter + "'>");
-            $('.logo_column.position' + logo_counter).append("<div class='back_side position"+logo_counter+" bposition" + logo_counter + "'>");
+            $('.logo_column.position' + logo_counter).append("<div class='front_side position" + logo_counter + " fposition" + logo_counter + "'>");
+            $('.logo_column.position' + logo_counter).append("<div class='back_side position" + logo_counter + " bposition" + logo_counter + "'>");
             $('.fposition' + logo_counter).append("<img src='images/logo_white/" + logo_array[logo_counter] + ".png'>");
+            $('.bposition' + logo_counter).append("<img src='images/logo_black/" + tools_logo[logo_counter] + ".png'>");
 
-            if(logo_counter <8){
-                $('.skills_info ul.col1').append("<li class='position"+logo_counter+"'>" + logo_array[logo_counter] + "</li>");
+            if (logo_counter < 8) {
+                $('.skills_info ul.col1').append("<li class='position" + logo_counter + "'>" + logo_array[logo_counter] + "</li>");
             }
-            if(logo_counter >=8){
-                $('.skills_info ul.col2').append("<li class='position"+logo_counter+"'>" + logo_array[logo_counter] + "</li>");
+            if (logo_counter >= 8) {
+                $('.skills_info ul.col2').append("<li class='position" + logo_counter + "'>" + logo_array[logo_counter] + "</li>");
             }
             logo_counter++;
         }
     }
 }
 
-function create_board2(){
-    for (var i=0; i<tools_array.length;i++){
+function create_board2() {
+    for (var i = 0; i < tools_array.length; i++) {
         $('.skills_info ul.col1b').append("<li>" + tools_array[i] + "</li>");
     }
 }
@@ -55,106 +58,136 @@ function hover_effect() {
     var logo = $('.front_side');
 
     li.mouseover(function () {
-        console.log(this.className);
+        var self_text=$(this).text();
         $(this).css({
             'text-shadow': '5px 3px 20px white',
-            'padding-left': '50px'});
-        $(".f"+this.className).addClass("hover");
-        $(".f"+this.className).parent().addClass("zindex");
+            'padding-left': '50px'
+        });
+        $(".f" + this.className).addClass("hover");
+        $(".f" + this.className).parent().addClass("zindex");
+        flashing_logo(self_text);
+
     });
     li.mouseout(function () {
         $(this).css({
             'text-shadow': 'none',
-            'padding-left': '0'});
-        $(".f"+this.className).removeClass("hover");
-        $(".f"+this.className).parent().removeClass("zindex");
+            'padding-left': '0'
+        });
+        $(".f" + this.className).removeClass("hover");
+        $(".f" + this.className).parent().removeClass("zindex");
+        clearInterval(flashing_logo_temp);
     });
 
     logo.mouseover(function () {
         var temp_class = $(this).attr('class').split(' ')[1];
         $(this).addClass("hover");
         $(this).parent().addClass("zindex");
-        $("li."+temp_class).css({
+        $("li." + temp_class).css({
             'text-shadow': '5px 3px 20px white',
-            'padding-left': '50px'});
+            'padding-left': '50px'
+        });
     });
     logo.mouseout(function () {
         var temp_class = $(this).attr('class').split(' ')[1];
         $(this).removeClass("hover");
         $(this).parent().removeClass("zindex");
-        $("li."+temp_class).css({
+        $("li." + temp_class).css({
             'text-shadow': 'none',
-            'padding-left': '0'});
+            'padding-left': '0'
+        });
     });
 }
 
-function slide(slide){
-    if(slide == 1){
+function hover_effect_back(){
+    var logo = $('.back_side');
+
+    logo.mouseover(function(){
+        var position = $(this).attr('class').split(' ')[2];
+        if(position == "bposition0" || position =="bposition1"){
+
+        }
+    });
+}
+
+function slide(slide) {
+    if (slide == 1) {
         $('.skills-container .tracker .skills_bubble2').removeClass("bubble_highlight");
         $('.skills-container .tracker .skills_bubble1').addClass("bubble_highlight");
-        slide_action('.bg2','.bg1');
+        slide_action('.bg2', '.bg1');
+        $('.tech1').css('color', '#A42327');
         flip(2);
     }
-    if(slide == 2){
+    if (slide == 2) {
         $('.skills-container .tracker .skills_bubble2').addClass("bubble_highlight");
         $('.skills-container .tracker .skills_bubble1').removeClass("bubble_highlight");
-        slide_action('.bg1','.bg2');
+        slide_action('.bg1', '.bg2');
+        $('.tech1').css('color', '#00CEE0');
         flip(1);
     }
 }
 
-function slide_action(slide_off,slide_on){
+function slide_action(slide_off, slide_on) {
     $(slide_off).addClass("slide_off");
-    setTimeout(function(){
-        $(slide_on).removeClass("slide_off");
-    },500);
+    $(slide_on).removeClass("slide_on");
+    setTimeout(function () {
+        $(slide_on).addClass("zindex");
+        $(slide_off).removeClass("zindex");
+        $(slide_off).removeClass("slide_off");
+        $(slide_off).addClass("slide_on");
+    }, 500);
 }
 
-function flip(side){
+function flip(side) {
     logo_array_length = logo_array.length;
-    position_array=[];
+    position_array = [];
 
 
-    for(var i=0;i<logo_array_length;i++){
+    for (var i = 0; i < logo_array_length; i++) {
         position_array.push(i);
     }
 
-    if(side == 1){
-        while(position_array.length>0){
-            var random1 = Math.floor(Math.random() * position_array.length);
-            var flip_position1=position_array.splice(random1,1);
-            var random2 = Math.floor(Math.random() * position_array.length);
-            var flip_position2=position_array.splice(random2,1);
-            flip_action(flip_position1,flip_position2,1);
+    if (side == 1) {
+        var interval = setInterval(function () {
 
-        }
+            var random1 = Math.floor(Math.random() * position_array.length);
+            var flip_position1 = position_array.splice(random1, 1);
+            var random2 = Math.floor(Math.random() * position_array.length);
+            var flip_position2 = position_array.splice(random2, 1);
+
+            flip_action(flip_position1, flip_position2, 1);
+
+            if (position_array.length == 0) {
+                clearInterval(interval);
+            }
+        }, 100);
     }
-    else{
-        while(position_array.length>0){
-            var random1 = Math.floor(Math.random() * position_array.length);
-            var flip_position1=position_array.splice(random1,1);
-            var random2 = Math.floor(Math.random() * position_array.length);
-            var flip_position2=position_array.splice(random2,1);
-            flip_action(flip_position1,flip_position2,2);
+    else {
+        var interval2 = setInterval(function () {
 
-        }
+            var random1 = Math.floor(Math.random() * position_array.length);
+            var flip_position1 = position_array.splice(random1, 1);
+            var random2 = Math.floor(Math.random() * position_array.length);
+            var flip_position2 = position_array.splice(random2, 1);
+
+            flip_action(flip_position1, flip_position2, 2);
+
+            if (position_array.length == 0) {
+                clearInterval(interval2);
+            }
+        }, 100);
     }
 }
 
-function flip_action(square1,square2,flip){
+function flip_action(square1, square2, flip) {
     var square = '.logo_column.position'
-
-    setTimeout(function(){
-        console.log("flipping time");
-        if(flip == 2){
-            $(square+square1).removeClass("transform");
-            $(square+square2).removeClass("transform");
-        }
-        else{
-            $(square+square1).addClass("transform");
-            $(square+square2).addClass("transform");
-        }
-    },500);
+    if (flip == 2) {
+        $(square + square1).removeClass("transform");
+        $(square + square2).removeClass("transform");
+    }
+    else {
+        $(square + square1).addClass("transform");
+        $(square + square2).addClass("transform");
+    }
 }
 
 function shrinking_bg() {
@@ -167,4 +200,31 @@ function shrinking_bg() {
     });
 }
 
+function flashing_logo(logo){
+
+     flashing_logo_temp = setInterval(function(){
+        if(logo=="PhpStorm"){
+            $('.bposition0 img').fadeOut(250).fadeIn(250);
+            $('.bposition1 img').fadeOut(250).fadeIn(250);
+            $('.bposition2 img').fadeOut(250).fadeIn(250);
+        }
+         if(logo=="Bitbucket"){
+             $('.bposition3 img').fadeOut(250).fadeIn(250);
+             $('.bposition7 img').fadeOut(250).fadeIn(250);
+         }
+         if(logo=="git"){
+             $('.bposition10 img').fadeOut(250).fadeIn(250);
+             $('.bposition11 img').fadeOut(250).fadeIn(250);
+         }
+         if(logo=="GitHub"){
+             $('.bposition5 img').fadeOut(250).fadeIn(250);
+             $('.bposition4 img').fadeOut(250).fadeIn(250);
+             $('.bposition9 img').fadeOut(250).fadeIn(250);
+             $('.bposition8 img').fadeOut(250).fadeIn(250);
+         }
+         if(logo=="Chrome DevTools"){
+             $('.bposition6 img').fadeOut(250).fadeIn(250);
+         }
+    },500);
+}
 
