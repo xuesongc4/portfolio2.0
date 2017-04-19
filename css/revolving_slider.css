@@ -5,6 +5,7 @@
     position: relative;
     top: 120px;
     perspective: 800px;
+
 }
 
 #skills-area .skills-container{
@@ -22,7 +23,7 @@
     position: absolute;
     top:0;
     left:0;
-    transition-duration: .7s;
+    transition-duration: 1s;
 }
 
 #skills-area .skills-container .bg2{
@@ -33,14 +34,14 @@
     position: absolute;
     top:0;
     left:0;
-    transition-duration: .7s;
+    transition-duration: 1s;
 }
 
 .slide_off{
-    transform: translateX(-1000px);
+    transform: translateX(-1500px);
 }
 .slide_on{
-    transform: translateX(40px);
+    transform: translateX(-1500px);
 }
 
 #skills-area .skills-container .skills_bg{
@@ -67,10 +68,14 @@
     width: 200px;
 }
 
-.skills_bg .skills_info ul.col1, .skills_bg .skills_info ul.col2{
+.skills_bg .skills_info ul.col1, .skills_bg .skills_info ul.col2, .skills_bg .skills_info ul.col1b {
     display: inline-block;
     width: 160px;
     vertical-align: top;
+}
+.skills_bg .skills_info h3{
+    font-size: 30px;
+    margin-bottom: 0;
 }
 
 
@@ -81,7 +86,13 @@
     position: absolute;
     top: 0;
     right: 0;
-    background-color: white;
+}
+
+.blue-bg{
+    background: url("../images/blue.jpg")no-repeat bottom center fixed;
+}
+.red-bg{
+    background: url("../images/red.jpg")no-repeat bottom center fixed;
 }
 
 .skills-container .logo_column{
