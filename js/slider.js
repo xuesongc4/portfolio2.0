@@ -100,19 +100,31 @@ function hover_effect() {
 
 
 function slide(slide) {
+    var skills_bg = $('.skills-container .skills_picture_container, #skills-area');
+    var bubble1 = $('.skills-container .tracker .skills_bubble1');
+    var bubble2 =  $('.skills-container .tracker .skills_bubble2');
+
     if (slide == 1) {
-        $('.skills-container .tracker .skills_bubble2').removeClass("bubble_highlight");
-        $('.skills-container .tracker .skills_bubble1').addClass("bubble_highlight");
+        bubble1.addClass("bubble_highlight");
         slide_action('.bg2', '.bg1');
         $('.tech1').css('color', '#A42327');
+        skills_bg.removeClass("blue-bg");
+        skills_bg.addClass("red-bg");
         flip(2);
+        setTimeout(function(){
+            bubble2.removeClass("bubble_highlight");
+        },700)
     }
     if (slide == 2) {
-        $('.skills-container .tracker .skills_bubble2').addClass("bubble_highlight");
-        $('.skills-container .tracker .skills_bubble1').removeClass("bubble_highlight");
+        bubble2.addClass("bubble_highlight");
         slide_action('.bg1', '.bg2');
         $('.tech1').css('color', '#00CEE0');
+        skills_bg.removeClass("red-bg");
+        skills_bg.addClass("blue-bg");
         flip(1);
+        setTimeout(function(){
+            bubble1.removeClass("bubble_highlight");
+        },700)
     }
 }
 
