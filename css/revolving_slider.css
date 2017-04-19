@@ -181,7 +181,7 @@
 }
 
 .bposition0 img, .bposition10 img, .bposition4 img, .bposition8 img{
-    float: right;
+    float:right;
 }
 .bposition2 img, .bposition11 img, .bposition5 img, .bposition9 img,  .bposition6 img, .bposition3 img, .bposition7 img {
     float:left;

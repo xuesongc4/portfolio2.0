@@ -49,7 +49,7 @@ function create_board(rows, columns) {
 
 function create_board2() {
     for (var i = 0; i < tools_array.length; i++) {
-        $('.skills_info ul.col1b').append("<li>" + tools_array[i] + "</li>");
+        $('.skills_info ul.col1b').append("<li class='bposition"+i+"'>" + tools_array[i] + "</li>");
     }
 }
 
@@ -98,16 +98,6 @@ function hover_effect() {
     });
 }
 
-function hover_effect_back(){
-    var logo = $('.back_side');
-
-    logo.mouseover(function(){
-        var position = $(this).attr('class').split(' ')[2];
-        if(position == "bposition0" || position =="bposition1"){
-
-        }
-    });
-}
 
 function slide(slide) {
     if (slide == 1) {
@@ -200,31 +190,83 @@ function shrinking_bg() {
     });
 }
 
+function hover_effect_back(){
+    var logo = $('.back_side');
+
+    logo.mouseover(function(){
+        var position = $(this).attr('class').split(' ')[2];
+
+        if(position == "bposition0" || position == "bposition1" || position == "bposition2"){
+            flashing_logo("PhpStorm");
+            $(".col1b .bposition4").css({
+                'text-shadow': '5px 3px 20px white',
+                'padding-left': '50px'
+            });
+        }
+        if(position == "bposition3" || position == "bposition7"){
+            flashing_logo("Bitbucket");
+            $(".col1b .bposition2").css({
+                'text-shadow': '5px 3px 20px white',
+                'padding-left': '50px'
+            });
+        }
+        if(position == "bposition4" || position == "bposition5" || position == "bposition8" || position == "bposition9"){
+            flashing_logo("GitHub");
+            $(".col1b .bposition1").css({
+                'text-shadow': '5px 3px 20px white',
+                'padding-left': '50px'
+            });
+        }
+        if(position == "bposition6"){
+            flashing_logo("Chrome DevTools");
+            $(".col1b .bposition0").css({
+                'text-shadow': '5px 3px 20px white',
+                'padding-left': '50px'
+            });
+        }
+        if(position == "bposition10" || position == "bposition11"){
+            flashing_logo("git");
+            $(".col1b .bposition3").css({
+                'text-shadow': '5px 3px 20px white',
+                'padding-left': '50px'
+            });
+        }
+    });
+    logo.mouseout(function () {
+        clearInterval(flashing_logo_temp);
+        $(".col1b li").css({
+            'text-shadow': 'none',
+            'padding-left': '0'
+        });
+    });
+}
+
 function flashing_logo(logo){
 
      flashing_logo_temp = setInterval(function(){
         if(logo=="PhpStorm"){
-            $('.bposition0 img').fadeOut(250).fadeIn(250);
-            $('.bposition1 img').fadeOut(250).fadeIn(250);
-            $('.bposition2 img').fadeOut(250).fadeIn(250);
+            $('.bposition0 img').fadeOut(200).fadeIn(200);
+            $('.bposition1 img').fadeOut(200).fadeIn(200);
+            $('.bposition2 img').fadeOut(200).fadeIn(200);
         }
          if(logo=="Bitbucket"){
-             $('.bposition3 img').fadeOut(250).fadeIn(250);
-             $('.bposition7 img').fadeOut(250).fadeIn(250);
+             $('.bposition3 img').fadeOut(200).fadeIn(200);
+             $('.bposition7 img').fadeOut(200).fadeIn(200);
          }
          if(logo=="git"){
-             $('.bposition10 img').fadeOut(250).fadeIn(250);
-             $('.bposition11 img').fadeOut(250).fadeIn(250);
+             $('.bposition10 img').fadeOut(200).fadeIn(200);
+             $('.bposition11 img').fadeOut(200).fadeIn(200);
          }
          if(logo=="GitHub"){
-             $('.bposition5 img').fadeOut(250).fadeIn(250);
-             $('.bposition4 img').fadeOut(250).fadeIn(250);
-             $('.bposition9 img').fadeOut(250).fadeIn(250);
-             $('.bposition8 img').fadeOut(250).fadeIn(250);
+             $('.bposition5 img').fadeOut(200).fadeIn(200);
+             $('.bposition4 img').fadeOut(200).fadeIn(200);
+             $('.bposition9 img').fadeOut(200).fadeIn(200);
+             $('.bposition8 img').fadeOut(200).fadeIn(200);
          }
          if(logo=="Chrome DevTools"){
-             $('.bposition6 img').fadeOut(250).fadeIn(250);
+             $('.bposition6 img').fadeOut(200).fadeIn(200);
          }
-    },500);
+    },400);
 }
+
 
