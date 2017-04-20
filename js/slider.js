@@ -17,6 +17,17 @@ $(document).ready(function () {
     }
 });
 
+
+function shrinking_bg() {
+    $(window).scroll(function () {
+        var win = $(this);
+        if (win.scrollTop() > 1177 && win.scrollTop() < 1800) {
+            var scale = 100 - ((win.scrollTop() - 1177) / 12);
+            $('#skill-section').css('background-size', scale + '%');
+        }
+    });
+}
+
 function create_board(rows, columns) {
 
     var landing = $(".skills_picture_container");
@@ -190,16 +201,6 @@ function flip_action(square1, square2, flip) {
         $(square + square1).addClass("transform");
         $(square + square2).addClass("transform");
     }
-}
-
-function shrinking_bg() {
-    $(window).scroll(function () {
-        var win = $(this);
-        if (win.scrollTop() > 1177 && win.scrollTop() < 1800) {
-            var scale = 100 - ((win.scrollTop() - 1177) / 12);
-            $('#skill-section').css('background-size', scale + '%');
-        }
-    });
 }
 
 function hover_effect_back(){
