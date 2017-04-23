@@ -6,21 +6,25 @@
     height: 100vh;
     width: 100vw;
 }
+.page2{
+    width: 100vw;
+    height: 85vh;
+}
 
 #home-section{
-    background:url('../images/backgrounds/stars.png')no-repeat bottom center fixed;
+    background:url('../images/backgrounds/stars.png')#FFFFFF no-repeat bottom center fixed;
 }
 
 #app-section{
-    background:url('../images/backgrounds/galaxy3.jpg')no-repeat bottom center fixed;
+    background:url('../images/backgrounds/galaxy3.jpg')#FFFFFF no-repeat bottom center fixed;
 }
 
 #skill-section{
-    background:url('../images/backgrounds/stars_middle3.png')no-repeat bottom center fixed;
+    background:url('../images/backgrounds/stars_middle3.png')#FFFFFF no-repeat bottom center fixed;
 }
 
 #contact-section{
-    background:url('../images/backgrounds/stars2.png')no-repeat center center;
+    background:url('../images/backgrounds/stars2.png') no-repeat bottom center;
 }
 
 #home-section .title{
@@ -151,3 +155,17 @@ section {
     }
 }
 
+.map-container{
+    width: 100%;
+    height: 110vh;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+#map{
+    width: 100%;
+   height: 100%;
+}
