@@ -31,7 +31,7 @@ function scrollThumb(){
 
     $(window).scroll(function(){
         if(win.scrollTop() < 500){
-            deltaScroll = 357+(win.scrollTop()/2.8);
+            deltaScroll = 357+(win.scrollTop()/2.2);
             thumb.css("left",deltaScroll+"px");
             thumb.css("display","block");
         }
