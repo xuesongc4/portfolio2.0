@@ -3,28 +3,32 @@
 /*---------------------------------------------------------------------*/
 
 .page{
-    height: 100vh;
+    height: 101vh;
     width: 100vw;
 }
 .page2{
     width: 100vw;
-    height: 85vh;
+    height: 90vh;
 }
 
 #home-section{
     background:url('../images/backgrounds/stars.png')#FFFFFF no-repeat bottom center fixed;
+    position: relative;
 }
 
 #app-section{
     background:url('../images/backgrounds/galaxy3.jpg')#FFFFFF no-repeat bottom center fixed;
+    position: relative;
 }
 
 #skill-section{
     background:url('../images/backgrounds/stars_middle3.png')#FFFFFF no-repeat bottom center fixed;
+    position: relative;
 }
 
 #contact-section{
     background:url('../images/backgrounds/stars2.png') no-repeat bottom center;
+    position: relative;
 }
 
 #home-section .title{
@@ -69,36 +73,64 @@
     position: fixed;
     top: 42px;
     left: 357px;
-    height: 7px;
+    height: 5px;
     width: 50px;
     background-color: #A42327;
     transition-duration: .1s;
     display: none;
 }
 
-section {
-    position: relative;
-    width: 100%;
-    height: 100%;
+.mouse-arrow.mouse-down {
+    position: absolute;
+    right: 50%;
+    bottom: 50px;
 }
 
-.mouse-down a {
+.mouse-arrow.mouse-up {
+    position: absolute;
+    right: 50%;
+    top: 80px;
+}
+
+.mouse-arrow.mouse-down a span{
+    transform: rotate(-45deg);
+}
+
+.mouse-arrow.mouse-up a span{
+    transform: rotate(135deg);
+}
+.mouse-arrow a.black{
+    color:black;
+}
+
+.mouse-arrow a.black span{
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.mouse-arrow a.white{
+    color:white;
+}
+
+.mouse-arrow a.white span{
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+
+.mouse-arrow a {
     position: absolute;
     bottom: 20px;
     left: 50%;
     z-index: 2;
     display: inline-block;
     transform: translate(0, -50%);
-    color: #fff;
     letter-spacing: .1em;
     text-decoration: none;
     transition: opacity .3s;
 }
 
-.mouse-down a {
-    padding-top: 80px;
-}
-.mouse-down a span {
+.mouse-arrow a span {
     position: absolute;
     top: 0;
     left: 50%;
@@ -107,27 +139,26 @@ section {
     margin-left: -12px;
     border-left: 2px solid #fff;
     border-bottom: 2px solid #fff;
-    transform: rotate(-45deg);
     animation: sdb07 1.7s infinite;
     opacity: 0;
     box-sizing: border-box;
 }
 
-.mouse-down a:hover span{
+.mouse-arrow a:hover span{
     border-color: #A42327;;
     border-width: 4px;
 }
 
-.mouse-down a span:nth-of-type(1) {
+.mouse-arrow a span:nth-of-type(1) {
     -webkit-animation-delay: 0s;
     animation-delay: 0s;
 }
-.mouse-down a span:nth-of-type(2) {
+.mouse-arrow a span:nth-of-type(2) {
     top: 16px;
     -webkit-animation-delay: .15s;
     animation-delay: .15s;
 }
-.mouse-down a span:nth-of-type(3) {
+.mouse-arrow a span:nth-of-type(3) {
     top: 32px;
     -webkit-animation-delay: .3s;
     animation-delay: .3s;

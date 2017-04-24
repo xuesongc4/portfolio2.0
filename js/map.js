@@ -31,7 +31,7 @@ function initMap() {
                 "elementType": "labels.text.stroke",
                 "stylers": [
                     {
-                        "visibility": "off"
+                        "visibility": "on"
                     },
                     {
                         "color": "#000000"
@@ -87,6 +87,15 @@ function initMap() {
                 ]
             },
             {
+                "featureType": "administrative.neighborhood",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "color": "#707070"
+                    }
+                ]
+            },
+            {
                 "featureType": "landscape",
                 "elementType": "geometry",
                 "stylers": [
@@ -127,10 +136,13 @@ function initMap() {
                 "elementType": "geometry.fill",
                 "stylers": [
                     {
-                        "color": "#A42327"
+                        "color": "#be2026"
                     },
                     {
                         "lightness": "0"
+                    },
+                    {
+                        "visibility": "on"
                     }
                 ]
             },
@@ -148,7 +160,7 @@ function initMap() {
                 "elementType": "labels.text.fill",
                 "stylers": [
                     {
-                        "color": "#ffffff"
+                        "visibility": "off"
                     }
                 ]
             },
@@ -157,7 +169,10 @@ function initMap() {
                 "elementType": "labels.text.stroke",
                 "stylers": [
                     {
-                        "color": "#A42327"
+                        "visibility": "off"
+                    },
+                    {
+                        "hue": "#ff000a"
                     }
                 ]
             },
@@ -222,6 +237,15 @@ function initMap() {
                 ]
             },
             {
+                "featureType": "road.local",
+                "elementType": "labels.text.stroke",
+                "stylers": [
+                    {
+                        "saturation": "-52"
+                    }
+                ]
+            },
+            {
                 "featureType": "transit",
                 "elementType": "geometry",
                 "stylers": [
@@ -248,9 +272,9 @@ function initMap() {
         ]
         , {name: 'Styled Map'});
 
-    var home = {lat: 33.6839, lng: -117.7947};
+    var home = {lat: 34.0211, lng: -118.3965};
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 12,
+        zoom: 11,
         center: home,
     });
     var marker = new google.maps.Marker({
