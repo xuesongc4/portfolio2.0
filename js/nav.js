@@ -21,7 +21,7 @@ $(document).on('click', '.scroll', function(event){
 
     $('html, body').animate({
         scrollTop: $( $.attr(this, 'href') ).offset().top
-    }, 2000);
+    }, 1000);
 });
 
 function scrollThumb(){
