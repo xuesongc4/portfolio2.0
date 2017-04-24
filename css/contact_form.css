@@ -1,0 +1,87 @@
+.contact-form{
+    width: 80%;
+    border: 5px solid #A42327;
+    border-radius: 20px;
+    background-color: rgba(0,0,0,.5);
+    margin: auto;
+    position: relative;
+    top: 180px;
+    font-size: 20px;
+    box-shadow: 0 0 50px 5px black;
+}
+
+.contact-form .page_title{
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+}
+
+.contact-form .me-container{
+    text-align: center;
+}
+
+.contact-form .me-container img{
+    height: 150px;
+    width: auto;
+    border-radius: 50%;
+    border: 5px solid #A42327;
+    background-color: white;
+    margin-bottom: 30px;
+    margin-top: -30px;
+}
+
+
+.contact-form form{
+    width: 50%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.form-control {
+    background-color: rgba(255, 255, 255, .7);
+    border-radius: 4px;
+    color: #111;
+    display: block;
+    font-size: 15px;
+    height: 30px;
+    padding: 6px 12px;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid rgba(255,255,255,.3);
+}
+
+.form-control:focus{
+  border: 2px solid #A42327;
+    outline-width: 0;
+}
+
+::-webkit-placeholder, ::-o-placeholder, ::-moz-placeholder {
+    font-family: 'Montserrat', sans-serif;
+    color: #d9d9d9;
+    font-size: 15px;
+    opacity: 1;
+}
+
+.textarea-control{
+    height: 100px;
+}
+
+.contact-form .button-container{
+    text-align: center;
+}
+
+.contact-form .submit{
+    padding: 25px 70px;
+    font-size: 16px;
+    background-color: black;
+    border-radius: 5px;
+    color: whitesmoke;
+    margin-top: 30px;
+    cursor: pointer;
+    transition-duration: .3s;
+    border: 2px solid rgba(255,255,255,.3);
+}
+
+.contact-form .submit:hover {
+    background-color: #A42327;
+}
