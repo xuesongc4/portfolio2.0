@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/apps_animation.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/revolving_slider.css">
+    <link rel="stylesheet" href="css/contact_form.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
     <script src="jquery/jquery-3.2.0.min.js"></script>
@@ -19,7 +20,8 @@
     <script src="js/cube.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/map.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNFASzWuzOzvsMiZZIc6EYy2a6dJ2TnsI&callback=initMap"></script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNFASzWuzOzvsMiZZIc6EYy2a6dJ2TnsI&callback=initMap"></script>
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 </head>
@@ -311,13 +313,35 @@
 </div>
 
 <div id="contact-section" class="page2">
+    <div class="container">
+        <div class="contact-form">
+            <div class="page_title">
+                Connect With Me
+            </div>
+            <div class="me-container">
+                <img src="images/me_cartoon.png">
+            </div>
+            <div class="contact-form-container">
+                <form>
+                    <input type="text" name="name" class="form-control" placeholder="Enter Your Name"><br>
+                    <input type="email" name="email" class="form-control"
+                           placeholder="Enter Your Email"><br>
+                    <textarea name="body" rows='4' cols="25" type="text" class="form-control textarea-control"
+                              placeholder="Enter Your Message"></textarea>
+                    <div class="button-container">
+                        <button type="submit" name="submit" class="submit">SEND</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <section class="mouse-arrow mouse-up">
         <a class="scroll white" href="#skill-section"><span></span><span></span></a>
     </section>
 </div>
 <footer>
     <div class="container">
-        <div class="row">
+        <div class="row relative">
             <ul class="social">
                 <li>Connect with me on:</li>
                 <li><a target="_blank" href="https://www.linkedin.com/in/jason-chen-619b2852"><i
@@ -325,9 +349,8 @@
                 <li><a target="_blank" href="https://www.facebook.com/profile.php?id=6026042"><i
                         class="fa fa-facebook"></i></a></li>
                 <li><a target="_blank" href="https://github.com/xuesongc4"><i class="fa fa-github"></i></a></li>
-                <li class="resume"><a target="_blank" href="documents/resume.pdf">Check out my Resume</a></li>
             </ul>
-
+            <div class="resume"><a target="_blank" href="documents/resume.pdf">Check out my Resume</a></div>
         </div>
     </div>
 </footer>

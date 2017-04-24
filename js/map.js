@@ -272,14 +272,15 @@ function initMap() {
         ]
         , {name: 'Styled Map'});
 
-    var home = {lat: 34.0211, lng: -118.3965};
+    var home = {lat: 34.05, lng: -118.4};
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 11,
-        center: home,
+        center: {lat: 33.9, lng: -118.6}
     });
     var marker = new google.maps.Marker({
         position: home,
-        map: map
+        map: map,
+
     });
     marker.setAnimation(google.maps.Animation.BOUNCE);
     map.mapTypes.set('styled_map', styledMapType);
