@@ -189,6 +189,7 @@
 .tech1{
     color: #A42327;
     transition-duration:.7s;
+    top: 100px;
 }
 
 .bposition0 img, .bposition10 img, .bposition4 img, .bposition8 img{
