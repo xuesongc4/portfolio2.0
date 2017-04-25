@@ -149,7 +149,7 @@
     border: white 5px solid;
     box-sizing: border-box;
     border-radius: 40px 0 40px 40px;
-    background: rgba(255,255,255,.3);
+    background: rgba(255,255,255,.5);
     height: 460px;
     width: 400px;
     position: absolute;
@@ -181,7 +181,7 @@
     font-weight: 900;
     font-size: 40px;
     transition-duration: .5s;
-    background-color: rgba(255,255,255,.3);
+    background-color: rgba(255,255,255,.5);
 }
 
 #close_out:hover{

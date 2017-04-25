@@ -20,6 +20,7 @@
     <script src="js/cube.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/map.js"></script>
+    <script src="js/email.js"></script>
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNFASzWuzOzvsMiZZIc6EYy2a6dJ2TnsI&callback=initMap"></script>
 
@@ -324,12 +325,10 @@
             <div class="contact-form-container">
                 <form>
                     <input type="text" name="name" class="form-control" placeholder="Enter Your Name"><br>
-                    <input type="email" name="email" class="form-control"
-                           placeholder="Enter Your Email"><br>
-                    <textarea name="body" rows='4' cols="25" type="text" class="form-control textarea-control"
-                              placeholder="Enter Your Message"></textarea>
+                    <input type="email" name="email" class="form-control" placeholder="Enter Your Email"><br>
+                    <textarea name="body" rows='4' cols="25" type="text" class="form-control textarea-control" placeholder="Enter Your Message"></textarea>
                     <div class="button-container">
-                        <button type="submit" name="submit" class="submit">SEND</button>
+                        <button type="submit" name="submit" class="submit" onclick="send_email()">SEND</button>
                     </div>
                 </form>
             </div>
