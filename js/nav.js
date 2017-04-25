@@ -40,6 +40,5 @@ function scrollThumb(){
             thumb.css("left",deltaScroll+"px");
             thumb.css("display","block");
         }
-        console.log(win.scrollTop());
     });
 }
