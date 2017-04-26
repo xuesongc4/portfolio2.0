@@ -24,7 +24,7 @@ $mail->addAddress('xuesongc@gmail.com');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 $mail->addReplyTo($_POST['email']);
 $mail->isHTML(true);                                  // Set email format to HTML
-$mail->Subject = "Message from JChen4.com";
+$mail->Subject = "Message from localhost";
 $mail->Body    = $_POST['body'];
 //$mail->AltBody = $_POST[''];
 if(!$mail->send()) {
