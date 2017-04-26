@@ -1,7 +1,7 @@
 <?php
 require_once('email_config.php');
 require('PHPMailer/PHPMailerAutoload.php');
-$mail = new PHPMailer;
+$mail = new PHPMailer(true);
 $mail->SMTPDebug = 3;                               // Enable verbose debug output
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'ssl://smtp.gmail.com';  // Specify main and backup SMTP servers
