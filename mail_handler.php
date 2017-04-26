@@ -23,12 +23,8 @@ $mail->FromName = $_POST['name'];//your email sending account name
 $mail->addAddress('xuesongc@gmail.com');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 $mail->addReplyTo($_POST['email']);
-//$mail->addCC('cc@example.com');
-//$mail->addBCC('bcc@example.com');
-//$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-//$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
-$mail->Subject = $_POST['subject'];
+$mail->Subject = "Message from JChen4.com";
 $mail->Body    = $_POST['body'];
 //$mail->AltBody = $_POST[''];
 if(!$mail->send()) {
@@ -37,5 +33,5 @@ if(!$mail->send()) {
 } else {
     print_r ('Message has been sent');
 }
-header('Location: index.html');
+header('Location: thankyou.html');
 ?>
