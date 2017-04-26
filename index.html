@@ -3,50 +3,357 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Jason's World</title>
+    <title>JC's World</title>
 
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900|Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900|Montserrat:400,700'
+          rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/format.css">
+    <link rel="stylesheet" href="css/apps_animation.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/revolving_slider.css">
+    <link rel="stylesheet" href="css/contact_form.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+    <script src="jquery/jquery-3.2.0.min.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/typed.js"></script>
+    <script src="js/cube.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/email.js"></script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNFASzWuzOzvsMiZZIc6EYy2a6dJ2TnsI&callback=initMap"></script>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 </head>
 <body>
-    <div id="home-section" class="page">
-        <div id="home-nav">
+<div class="map-container">
+    <div id="map"></div>
+</div>
+<div id="home-section" class="page">
+    <!----------------------------start of nav------------------------------------------------------------>
+    <div id="pop-nav">
+        <div class="container">
+            <div class="scroll-thumb"></div>
+            <div class="logo-container">
+                <a class="scroll white" href="#home-section">
+                    <span class="logo">J<span class="logo-c">C</span></span> 's World
+                </a>
+            </div>
+            <div class="nav-buttons">
+                <ul>
+                    <li>
+                        <a id="page2" class="scroll" href="#app-section">
+                            Applications
+                        </a>
+                    </li>
+                    <li>
+                        <a id="page3" class="scroll" href="#skill-section">
+                            Tech Skills
+                        </a>
+                    </li>
+                    <li>
+                        <a id="page4" class="scroll" href="#contact-section">
+                            Connect With Me
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="home-nav">
+        <div class="container">
+            <div class="logo-container">
+                <a href=".">
+                    <span class="logo">J<span class="logo-c">C</span></span> 's World
+                </a>
+            </div>
+            <div class="nav-buttons">
+                <ul>
+                    <li>
+                        <a class="scroll" href="#app-section">
+                            Applications
+                        </a>
+                    </li>
+                    <li>
+                        <a class="scroll" href="#skill-section">
+                            Tech Skills
+                        </a>
+                    </li>
+                    <li>
+                        <a class="scroll" href="#contact-section">
+                            Connect With Me
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!----------------------------end of nav------------------------------------------------------------>
+    <!---------------------------------------------------------start of content   ----------------------->
+    <div class="container">
+        <div id="typed_intro">
+            <span class="line1"></span>
+        </div>
+        <div class="me title">
+            Jason&nbsp;Chen
+        </div>
+        <div class="profession title">
+            &ltweb_developer&gt
+        </div>
+    </div>
+    <!---------------------------------------------------------end of content   ----------------------->
+    <section class="mouse-arrow mouse-down">
+        <a class="scroll white" href="#app-section"><span></span><span></span></a>
+    </section>
+</div>
+<div id="app-section" class="page">
+    <!------------------------------------------------------apps animation----------------------->
+    <div class="container relative">
+
+        <div class="cube">
             <div class="container">
-                <div class="logo-container">
-                    <a href=".">
-                        <span class="logo">J<span class="logo-c">C</span></span> 's World
-                    </a>
+                <h2 class="page_title">Applications</h2>
+            </div>
+            <div class="cube_container">
+                <div id="cube" class="rotate">
+                    <figure onclick="highlight(1)" class="front cube_border">
+                        <div class="cube_font">
+                            iBet
+                        </div>
+                        <div class="video_container">
+                            <video class="cube_video" autoplay loop>
+                                <source src="video/iBet.mp4" type="video/mp4"/>
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>
+                    </figure>
+                    <figure onclick="highlight(2)" class="right cube_border">
+                        <div class="cube_font">
+                            Moduulis.com
+                        </div>
+                        <div class="video_container">
+                            <video class="cube_video" autoplay loop>
+                                <source src="video/moduulis.mp4" type="video/mp4"/>
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>
+                    </figure>
+                    <figure onclick="highlight(3)" class="back cube_border">
+                        <div class="cube_font">
+                            Tic-Tac-REMIX!
+                        </div>
+                        <div class="video_container">
+                            <video class="cube_video" autoplay loop>
+                                <source src="video/testvid.mp4" type="video/mp4"/>
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>
+                    </figure>
+                    <figure onclick="highlight(4)" class="left cube_border">
+                        <div class="cube_font">
+                            for Dummies
+                        </div>
+                        <div class="video_container">
+                            <video class="cube_video" autoplay loop>
+                                <source src="video/reading.mp4" type="video/mp4"/>
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>
+                    </figure>
                 </div>
-                <div class="nav-buttons">
-                    <ul>
-                        <li>
-                            <a href="#app-section">
-                                Applications
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#skill-section">
-                                Technical Skills
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#contact-section">
-                                Connect With Me
-                            </a>
-                        </li>
-                    </ul>
+            </div>
+        </div>
+        <!---------------------------------------------------------------------------application info-->
+        <div id="info">
+            <div id="close_out_container">
+                <div id="close_out" class="close">X</div>
+            </div>
+            <div class="info_content">
+                <div class="side1">
+                    <h4>
+                        iBet
+                    </h4>
+                    <p>
+                        A mobile friendly web application that allows for a user to create an account and make
+                        simulated sports bets with real odds. Results are logged and graphed under that account so that
+                        long term
+                        results can be analyzed.
+                    <div>
+                        <a target="_blank" href="http://www.danlee.site/c10_sports/" class="button link">
+                            Live Site
+                        </a>
+                        <a target="_blank" href="https://github.com/xuesongc4/c10_sports" class="button github">
+                            GitHub
+                        </a>
+                    </div>
+                    </p>
+                </div>
+                <div class="side2">
+                    <h4>
+                        Moduulis.com
+                    </h4>
+                    <p>
+                        A WordPress based mobile friendly e-commerce (Woocomerce) website built around
+                        customizable snack stadiums. The site includes a blog, a vlog and a functional
+                        store.
+                    <div>
+                        <a target="_blank" href="http://www.moduulis.com" class="button link">
+                            Live Site
+                        </a>
+                    </div>
+                    </p>
+                </div>
+                <div class="side3">
+                    <h4>
+                        Tic-Tac-REMIX!
+                    </h4>
+                    <p>
+                        A DJ/music themed tic-tac-toe game that introduces a musical twist the
+                        the classic game. Each player's turn adds layers of music to the playing sound
+                        track.
+                    <div>
+                        <a target="_blank" href="http://jchen4.com/apps/tictacremix" class="button link">
+                            Live Demo
+                        </a>
+                        <a target="_blank" href="https://github.com/xuesongc4/tictacremix"
+                           class="button github">
+                            GitHub
+                        </a>
+                    </div>
+                    </p>
+                </div>
+                <div class="side4">
+                    <h4>
+                        Reading For Dummies
+                    </h4>
+                    <p>
+                        The average person reads at about 300 words per a minute, however by removing the need to move
+                        your eyes you can read much faster. Take a look at this app that helps slow readers like
+                        myself read at amazingly high speeds!
+                    <div>
+                        <a target="_blank" href="http://jchen4.com/apps/RFD" class="button link">
+                            Live Demo
+                        </a>
+                        <a target="_blank" href="https://github.com/xuesongc4/readings_for_dummies"
+                           class="button github">
+                            GitHub
+                        </a>
+                    </div>
+                    </p>
+                </div>
+            </div>
+            <!-------------------------------------------------------------------- current side tracker-->
+            <div class="tracker_container">
+                <div class="tracker">
+                    <div class="side1_bubble bubble" onclick="highlight(1)"></div>
+                    <div class="side2_bubble bubble" onclick="highlight(2)"></div>
+                    <div class="side3_bubble bubble" onclick="highlight(3)"></div>
+                    <div class="side4_bubble bubble" onclick="highlight(4)"></div>
                 </div>
             </div>
         </div>
     </div>
-    <div id="app-section" class="page">
+    <!----------------------------------------------------end of apps animation----------------------->
+    <div class="click-me">
+        <h3>Click on an App for more info...</h3>
     </div>
-    <div id="skill-section" class="page">
-        <div id="skills-area">
+    <section class="mouse-arrow mouse-down">
+        <a class="scroll white" href="#skill-section"><span></span><span></span></a>
+    </section>
+    <section class="mouse-arrow mouse-up">
+        <a class="scroll white" href="#home-section"><span></span><span></span></a>
+    </section>
+</div>
+
+<div id="skill-section" class="page">
+    <div class="container">
+        <h2 class="page_title tech1">Tech Skills</h2>
+    </div>
+
+    <!-- ---------------------------------------------------slider ----------------------->
+    <div id="skills-area">
+        <div class="skills-container">
+            <div class="bg2 slide_on">
+                <div class="skills_bg">
+                    <div class="skills_info">
+                        <h3>Development Tools</h3>
+                        <ul class="col1b">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="bg1 zindex">
+                <div class="skills_bg">
+                    <div class="skills_info">
+                        <h3>Web Development</h3>
+                        <ul class="col1">
+                        </ul>
+                        <ul class="col2">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="tracker">
+                <h3 class="click">Click for more...</h3>
+                <div class="skills_bubble1 bubble bubble_highlight" onclick="slide(1)"></div>
+                <div class="skills_bubble2 bubble" onclick="slide(2)"></div>
+            </div>
+            <div class="skills_picture_container">
+            </div>
         </div>
     </div>
-    <div id="contact-section" class="page">
+    <section class="mouse-arrow mouse-down">
+        <a class="scroll white" href="#contact-section"><span></span><span></span></a>
+    </section>
+    <section class="mouse-arrow mouse-up">
+        <a class="scroll black" href="#app-section"><span></span><span></span></a>
+    </section>
+</div>
+<!--------------------------------------------------------end slider------------------------->
+</div>
+
+<div id="contact-section" class="page2">
+    <div class="container">
+        <div class="contact-form">
+            <div class="page_title">
+                Connect With Me
+            </div>
+            <div class="me-container">
+                <img src="images/me_cartoon.png">
+            </div>
+            <div class="contact-form-container">
+                <form>
+                    <input type="text" name="name" class="form-control" placeholder="Enter Your Name"><br>
+                    <input type="email" name="email" class="form-control" placeholder="Enter Your Email"><br>
+                    <textarea name="body" rows='4' cols="25" type="text" class="form-control textarea-control" placeholder="Enter Your Message"></textarea>
+                    <div class="button-container">
+                        <button type="submit" name="submit" class="submit" onclick="send_email()">SEND</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
+    <section class="mouse-arrow mouse-up">
+        <a class="scroll white" href="#skill-section"><span></span><span></span></a>
+    </section>
+</div>
+<footer>
+    <div class="container">
+        <div class="row relative">
+            <ul class="social">
+                <li>Connect with me on:</li>
+                <li><a target="_blank" href="https://www.linkedin.com/in/jason-chen-619b2852"><i
+                        class="fa fa-linkedin"></i></a></li>
+                <li><a target="_blank" href="https://www.facebook.com/profile.php?id=6026042"><i
+                        class="fa fa-facebook"></i></a></li>
+                <li><a target="_blank" href="https://github.com/xuesongc4"><i class="fa fa-github"></i></a></li>
+            </ul>
+            <div class="resume"><a target="_blank" href="documents/resume.pdf">Check out my Resume</a></div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/typed_intro.js"></script>
 </body>
 </html>
