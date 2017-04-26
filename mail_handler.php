@@ -1,10 +1,10 @@
 <?php
 require_once('email_config.php');
 require('PHPMailer/PHPMailerAutoload.php');
-$mail = new PHPMailer(true);
+$mail = new PHPMailer;
 $mail->SMTPDebug = 3;                               // Enable verbose debug output
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'ssl://smtp.gmail.com';  // Specify main and backup SMTP servers
+$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
 $mail->Username = EMAIL_USER;                 // SMTP username
 $mail->Password = EMAIL_PASS;                 // SMTP password
@@ -33,4 +33,6 @@ if(!$mail->send()) {
 } else {
     print_r ('Message has been sent');
 }
-header('Location:thankyou.html');?>
+header('Location: /thankyou.html');
+
+?>
