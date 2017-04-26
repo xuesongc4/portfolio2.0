@@ -33,6 +33,5 @@ if(!$mail->send()) {
 } else {
     print_r ('Message has been sent');
 }
-header('Location: /thankyou.html');
-
+print_r(error_get_last());
 ?>
