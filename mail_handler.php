@@ -3,7 +3,7 @@ require_once('email_config.php');
 require('PHPMailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
 $mail->SMTPDebug = 3;                               // Enable verbose debug output
-//$mail->isSMTP();                                      // Set mailer to use SMTP
+$mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
 $mail->Username = EMAIL_USER;                 // SMTP username
@@ -24,7 +24,7 @@ $mail->addAddress('xuesongc@gmail.com');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 $mail->addReplyTo($_POST['email']);
 $mail->isHTML(true);                                  // Set email format to HTML
-$mail->Subject = "Message from JChen4.com";
+$mail->Subject = "Message from localhost";
 $mail->Body    = $_POST['body'];
 //$mail->AltBody = $_POST[''];
 if(!$mail->send()) {
