@@ -23,7 +23,7 @@
     position: absolute;
     top:0;
     left:0;
-    transition-duration: 1s;
+    transition-duration: .5s;
 }
 
 #skills-area .skills-container .bg2{
@@ -34,7 +34,7 @@
     position: absolute;
     top:0;
     left:0;
-    transition-duration: 1s;
+    transition-duration: .5s;
 }
 
 .slide_off{
@@ -48,17 +48,13 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,.5);
+    display: inline-block;
 }
 
-.skills_bg{
-    display: inline-block;
-    height: 100%;
-    width: 50%;
-}
 .skills_bg .skills_info{
     font-size: 22px;
     color: white;
-    width:60%;
+    width:70%;
     float: right;
 }
 .skills_bg .skills_info li{
@@ -90,9 +86,11 @@
 
 .blue-bg{
     background: url("../images/blue.jpg")no-repeat bottom center fixed;
+    background-size: cover;
 }
 .red-bg{
     background: url("../images/red.jpg")no-repeat bottom center fixed;
+    background-size: cover;
 }
 
 .skills-container .logo_column{
@@ -210,4 +208,84 @@
 
 .bposition8 img, .bposition9 img, .bposition7 img{
     margin-top: -1px !important;
+}
+
+@media only screen and (max-width: 1600px){
+    .skills_picture_container{
+        display:none
+    }
+    #skills-area .skills-container .bg2{
+        width: 100%;
+    }
+    #skills-area .skills-container .bg1{
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+    #skill-section h2{
+        font-size: 40px;
+    }
+
+    #skill-section .mouse-arrow a.black span{
+        border-left: 2px solid white;
+        border-bottom: 2px solid white;
+    }
+    #skill-section .mouse-arrow a:hover span{
+        border-color: #A42327;;
+        border-width: 4px;
+    }
+
+    #skills-area{
+        height: 736px;
+        top:-49px
+    }
+
+    #skills-area .skills-container .bg2{
+        height: 736px;
+    }
+    #skills-area .skills-container .bg1{
+        height: 736px;
+    }
+    #skills-area .skills-container{
+        top: 0;
+    }
+    .skills_bg .skills_info{
+        margin-top: 150px;
+        width: 75%;
+    }
+    .skills-container .tracker{
+        bottom: 125px;
+    }
+    .tech1{
+        z-index: 1;
+        top:100px;
+        padding-right: 50px;
+    }
+    #skill-section .page_title{
+        text-align: right;
+    }
+}
+
+@media only screen and (max-width: 726px){
+    .skills_bg .skills_info ul.col1, .skills_bg .skills_info ul.col2, .skills_bg .skills_info ul.col1b{
+        width: 120px;
+    }
+
+    .skills_bg .skills_info h3{
+        font-size: 25px;
+    }
+    .skills_bg .skills_info{
+        width: 90%;
+    }
+    .skills-container .tracker{
+        width: 100%;
+    }
+    .skills_bg .skills_info{
+        font-size: 16px;
+    }
+    .skills-container .tracker h3.click{
+        font-size: 16px;
+    }
 }

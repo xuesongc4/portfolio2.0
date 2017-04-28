@@ -100,17 +100,10 @@
 .mouse-arrow.mouse-up a span{
     transform: rotate(135deg);
 }
-.mouse-arrow a.black{
-    color:black;
-}
 
 .mouse-arrow a.black span{
     border-left: 2px solid black;
     border-bottom: 2px solid black;
-}
-
-.mouse-arrow a.white{
-    color:white;
 }
 
 .mouse-arrow a.white span{
@@ -231,6 +224,9 @@
 }
 
 @media only screen and (max-width: 1024px) {
+    #skill-section{
+        background:none;
+    }
     #home-nav .nav-buttons ul li, #pop-nav .nav-buttons ul li {
         font-size: 16px;
     }
@@ -274,7 +270,7 @@
     }
 
     .mouse-arrow.mouse-up {
-        top: 5%;
+        top: 11%;
     }
     .click-me{
         bottom: -290px;
@@ -285,7 +281,9 @@
 }
 
 @media only screen and (max-width: 726px){
-
+    .mouse-arrow.mouse-up {
+        top: 5%;
+    }
     #home-section .profession{
         right: 3%;
         font-size: 12px;
@@ -295,7 +293,7 @@
         font-size: 30px;
     }
     #typed_intro{
-        left:5%;
+        left:2%;
         font-size: 10px;
         line-height: 24px;
     }
