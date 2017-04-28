@@ -19,6 +19,7 @@
 #app-section{
     background:url('../images/backgrounds/galaxy3.jpg')#FFFFFF no-repeat top center fixed;
     position: relative;
+    background-color: black;
 }
 
 #skill-section{
@@ -60,7 +61,7 @@
 .click-me{
     position: relative;
     bottom: -400px;
-    left: 380px;
+    left: 15%;
     color: rgba(255,255,255,.6);
     font-size: 18px;
 }
@@ -229,38 +230,64 @@
     }
 }
 
-@media only screen and (max-width: 1024px){
-    #home-section .profession{
+@media only screen and (max-width: 1024px) {
+    #home-nav .nav-buttons ul li, #pop-nav .nav-buttons ul li {
+        font-size: 16px;
+    }
+
+    #home-section .profession {
         font-size: 18px;
+        bottom: 320px;
     }
-    #home-section .me{
+
+    #home-section .me {
         font-size: 35px;
+        bottom: 350px;
     }
-    #typed_intro{
+
+    #typed_intro {
         font-size: 16px;
         line-height: 30px;
     }
-    #home-section{
+
+    #home-section {
         background-attachment: scroll;
-        background-size:cover;
+        background-size: cover;
     }
 
-    #app-section{
+    #app-section {
         background-attachment: scroll;
-        background-size:cover;
+        background-size: cover;
     }
 
-    #skill-section{
+    #skill-section {
         background-attachment: scroll;
-        background-size:cover;
+        background-size: cover;
+    }
+
+    .page2, .page {
+        height: 736px;
+    }
+
+    .mouse-arrow.mouse-down {
+        bottom: 13%;
+    }
+
+    .mouse-arrow.mouse-up {
+        top: 5%;
+    }
+    .click-me{
+        bottom: -290px;
+        left: 5%;
+        font-size: 16px;
     }
 
 }
 
 @media only screen and (max-width: 726px){
+
     #home-section .profession{
         right: 3%;
-        bottom:380px;
         font-size: 12px;
     }
     #home-section .me{
@@ -268,8 +295,12 @@
         font-size: 30px;
     }
     #typed_intro{
-        left:1%;
+        left:5%;
         font-size: 10px;
         line-height: 24px;
+    }
+    .click-me{
+        left:2%;
+        font-size: 12px;
     }
 }
