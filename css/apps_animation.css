@@ -157,6 +157,7 @@
     margin-top: -110px;
     font-size: 20px;
     display: none;
+    z-index: 1;
 }
 
 #close_out_container{
@@ -211,7 +212,7 @@
 @media only screen and (max-width: 1024px) {
 
     #app-section .page_title {
-        top: -60px;
+        top: -40px;
     }
 
     #app-section h2 {
@@ -219,7 +220,7 @@
     }
 
     #app-section .cube {
-        top: 120px;
+        top: 150px;
     }
 
     #cube .front, #cube .right, #cube .left, #cube .back {

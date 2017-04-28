@@ -124,7 +124,7 @@ function slide(slide) {
         flip(2);
         setTimeout(function(){
             bubble2.removeClass("bubble_highlight");
-        },700)
+        },500)
     }
     if (slide == 2) {
         bubble2.addClass("bubble_highlight");
@@ -135,7 +135,7 @@ function slide(slide) {
         flip(1);
         setTimeout(function(){
             bubble1.removeClass("bubble_highlight");
-        },700)
+        },500)
     }
 }
 

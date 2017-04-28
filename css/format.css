@@ -136,7 +136,7 @@ a:link, a:visited, a:active{
 }
 .bubble:hover{
     cursor: pointer;
-    background-color: rgba(255,255,255,.6);
+    background-color: rgba(255,255,255,1);
 }
 .bubble_highlight{
     border-width: 4px;
