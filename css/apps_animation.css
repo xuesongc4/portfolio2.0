@@ -183,6 +183,7 @@
     font-size: 40px;
     transition-duration: .5s;
     background-color: rgba(255,255,255,.5);
+    z-index: 10;
 }
 
 #close_out:hover{
@@ -220,7 +221,7 @@
     }
 
     #app-section .cube {
-        top: 150px;
+        top: 230px;
     }
 
     #cube .front, #cube .right, #cube .left, #cube .back {
@@ -259,6 +260,9 @@
 }
 
 @media only screen and (max-width: 726px) {
+    #app-section .cube {
+        top: 150px;
+    }
     #info {
         background: rgba(255,255,255,.87);
         height: 500px;

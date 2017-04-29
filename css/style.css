@@ -261,19 +261,21 @@
         background-size: cover;
     }
 
-    .page2, .page {
-        height: 736px;
+    .page {
+        height: 100vh;
     }
-
+    .page2{
+        height: 90vh;
+    }
     .mouse-arrow.mouse-down {
-        bottom: 13%;
+        bottom: 5%;
     }
 
     .mouse-arrow.mouse-up {
-        top: 11%;
+        top: 10%;
     }
     .click-me{
-        bottom: -290px;
+        bottom: -40%;
         left: 5%;
         font-size: 16px;
     }
