@@ -248,5 +248,6 @@ footer .container .row .resume a {
     }
     footer{
         font-size: 16px;
+        height: 90px;
     }
 }
