@@ -85,7 +85,7 @@
 }
 
 .blue-bg{
-    background: url("../images/blue.jpg")no-repeat bottom center fixed;
+    background: url("../images/blue.jpg")no-repeat bottom center fixed ;
     background-size: cover;
 }
 .red-bg{
@@ -238,15 +238,15 @@
     }
 
     #skills-area{
-        height: 736px;
+        height: 100vh;
         top:-49px
     }
 
     #skills-area .skills-container .bg2{
-        height: 736px;
+        height: 100vh;
     }
     #skills-area .skills-container .bg1{
-        height: 736px;
+        height:100vh;
     }
     #skills-area .skills-container{
         top: 0;
@@ -265,6 +265,9 @@
     }
     #skill-section .page_title{
         text-align: right;
+    }
+    .blue-bg, .red-bg{
+       background-attachment: scroll;
     }
 }
 
