@@ -297,105 +297,6 @@
 }
 
 @media only screen
-and (min-device-width : 375px)
-and (max-device-width : 667px)
-and (orientation : landscape),
-
-{
-    #pop-nav{
-        display: none;
-    }
-    #typed_intro{
-        top: 70px;
-        line-height: 25px;
-    }
-    #home-section .me{
-        bottom: 185px;
-    }
-    #home-section .profession{
-        bottom: 150px
-    }
-    #app-section .cube{
-        top:70px;
-    }
-    #app-section h2{
-        font-size: 20px;
-    }
-    #app-section .page_title{
-        top:-20px;
-    }
-    #cube .front, #cube .right, #cube .left, #cube .back {
-        height: 130px;
-        width: 130px;
-    }
-    #cube figure{
-        font-size: 16px;
-    }
-    #cube .front {
-        transform: rotateY(0deg) translateZ(100px)
-    }
-
-    #cube .right {
-        transform: rotateY(90deg) translateZ(100px)
-    }
-
-    #cube .left {
-        transform: rotateY(-90deg) translateZ(100px)
-    }
-
-    #cube .back {
-        transform: rotateY(180deg) translateZ(100px)
-    }
-    .zoom_front{
-        transform: rotateY(0deg) translateZ(280px) !important;
-    }
-    .zoom_right{
-        transform: rotateY(90deg) translateZ(280px) !important;
-    }
-    .zoom_back{
-        transform: rotateY(180deg) translateZ(280px) !important;
-    }
-    .zoom_left{
-        transform: rotateY(-90deg) translateZ(280px) !important;
-    }
-    .cube_container{
-        height: 130px;
-        width: 130px;
-    }
-    #info {
-        height: 290px;
-        width: 450px;
-        margin-top: -105px;
-        right: 10px;
-        border-radius: 30px;
-        font-size: 16px;
-    }
-    #info h4{
-        font-size: 25px;
-    }
-
-    #close_out_container{
-        right:-375px;
-        top:-5px;
-    }
-    .tech1{
-        top:50px;
-    }
-    .skills_bg .skills_info{
-
-    }
-    .skills_bg .skills_info h3{
-        font-size: 20px;
-    }
-    .skills_bg .skills_info ul.col1, .skills_bg .skills_info ul.col2, .skills_bg .skills_info ul.col1b{
-        width: 130px;
-    }
-    .skills-container .tracker{
-        bottom: 0;
-    }
-}
-
-@media only screen
 and (min-device-width: 414px)
 and (max-device-width: 736px)
 and (orientation: landscape)
@@ -492,3 +393,111 @@ and (-webkit-min-device-pixel-ratio: 3){
         bottom: 0;
     }
 }
+
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : landscape){
+    .skills-container .tracker{
+        width: 50%;
+    }
+    .mouse-arrow.mouse-up{
+        top:8%;
+    }
+    #pop-nav{
+        display: none;
+    }
+    #typed_intro{
+        top: 70px;
+        line-height: 25px;
+        font-size: 14px;
+    }
+    #home-section .me{
+        bottom: 165px;
+        right:15%;
+    }
+    #home-section .profession{
+        bottom: 145px;
+        right:12%;
+    }
+    #app-section .cube{
+        top:70px;
+
+    }
+    #app-section h2{
+        font-size: 20px;
+    }
+    #app-section .page_title{
+        top:-20px;
+    }
+    #cube .front, #cube .right, #cube .left, #cube .back {
+        height: 130px;
+        width: 130px;
+    }
+    #cube figure{
+        font-size: 16px;
+    }
+    #cube .front {
+        transform: rotateY(0deg) translateZ(100px)
+    }
+
+    #cube .right {
+        transform: rotateY(90deg) translateZ(100px)
+    }
+
+    #cube .left {
+        transform: rotateY(-90deg) translateZ(100px)
+    }
+
+    #cube .back {
+        transform: rotateY(180deg) translateZ(100px)
+    }
+    .zoom_front{
+        transform: rotateY(0deg) translateZ(280px) !important;
+    }
+    .zoom_right{
+        transform: rotateY(90deg) translateZ(280px) !important;
+    }
+    .zoom_back{
+        transform: rotateY(180deg) translateZ(280px) !important;
+    }
+    .zoom_left{
+        transform: rotateY(-90deg) translateZ(280px) !important;
+    }
+    .cube_container{
+        height: 130px;
+        width: 130px;
+    }
+    #info {
+        height: 290px;
+        width: 450px;
+        margin-top: -105px;
+        right: 10px;
+        border-radius: 30px;
+        font-size: 16px;
+    }
+    #info h4{
+        font-size: 25px;
+    }
+
+    #close_out_container{
+        right:-375px;
+        top:-5px;
+    }
+    .tech1{
+        top:50px;
+    }
+    .skills_bg .skills_info{
+
+    }
+    .skills_bg .skills_info h3{
+        font-size: 20px;
+    }
+    .skills_bg .skills_info ul.col1, .skills_bg .skills_info ul.col2, .skills_bg .skills_info ul.col1b{
+        width: 130px;
+    }
+    .skills-container .tracker{
+        bottom: 0;
+    }
+}
+

@@ -146,9 +146,10 @@
     }
 }
 
+
 @media only screen
-and (min-device-width : 375px)
-and (max-device-width : 667px)
+and (min-device-width : 414px)
+and (max-device-width : 736px)
 and (orientation : landscape)
 {
     .contact-form{
@@ -186,12 +187,12 @@ and (orientation : landscape)
 }
 
 @media only screen
-and (min-device-width : 414px)
-and (max-device-width : 736px)
+and (min-device-width : 375px)
+and (max-device-width : 667px)
 and (orientation : landscape)
 {
     .contact-form{
-        top:100px;
+        top:65px;
     }
     .contact-form .page_title{
         font-size: 20px;
