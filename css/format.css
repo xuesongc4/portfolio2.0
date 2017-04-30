@@ -5,11 +5,8 @@ body{
     margin: 0;
     font-size: 0;
     font-family: 'Montserrat', sans-serif;
-}
-.vertical-hider{
     overflow: hidden;
 }
-
 h2{
     color: white;
     font-size: 50px;
