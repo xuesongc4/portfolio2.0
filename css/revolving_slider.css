@@ -200,10 +200,8 @@
  .bposition4 img, .bposition5 img{
    margin-top: 0 !important;
 }
-.bposition3 img{
-    position: absolute;
-    bottom: 0;
-    right: -10px;
+.skills-container .logo_column .bposition3 img{
+    margin: 0;
 }
 
 .bposition8 img, .bposition9 img, .bposition7 img{
