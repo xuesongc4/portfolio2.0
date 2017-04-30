@@ -273,7 +273,7 @@
 
 @media only screen and (max-width: 726px){
     .skills_bg .skills_info ul.col1, .skills_bg .skills_info ul.col2, .skills_bg .skills_info ul.col1b{
-        width: 120px;
+        width: 115px;
     }
 
     .skills_bg .skills_info h3{
@@ -290,30 +290,6 @@
     }
     .skills-container .tracker h3.click{
         font-size: 16px;
-    }
-}
-
-
-@media only screen
-and (min-device-width : 375px)
-and (max-device-width : 667px)
-and (orientation : landscape)
-{
-    .tech1{
-        top:50px;
-    }
-    .skills_bg .skills_info{
-        font-size: 16px;
-        margin-top: 65px;
-    }
-    .skills_bg .skills_info h3{
-        font-size: 20px;
-    }
-    .skills_bg .skills_info ul.col1, .skills_bg .skills_info ul.col2, .skills_bg .skills_info ul.col1b{
-        width: 130px;
-    }
-    .skills-container .tracker{
-        bottom: 0;
     }
 }
 
@@ -338,5 +314,29 @@ and (-webkit-min-device-pixel-ratio: 3)
     }
     .skills-container .tracker{
         bottom: 0;
+    }
+}
+
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : landscape)
+{
+    .tech1{
+        top:50px;
+    }
+    .skills_bg .skills_info{
+        font-size: 16px;
+        margin-top: 65px;
+    }
+    .skills_bg .skills_info h3{
+        font-size: 20px;
+    }
+    .skills_bg .skills_info ul.col1, .skills_bg .skills_info ul.col2, .skills_bg .skills_info ul.col1b{
+        width: 130px;
+    }
+    .skills-container .tracker{
+        bottom: 0;
+        width: 50%;
     }
 }

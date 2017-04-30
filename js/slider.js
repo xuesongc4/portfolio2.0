@@ -116,8 +116,8 @@ function slide(slide) {
     var bubble2 =  $('.skills-container .tracker .skills_bubble2');
 
     if (slide == 1) {
-        skills_bg.removeClass("blue-bg");
         skills_bg.addClass("red-bg");
+        skills_bg.removeClass("blue-bg");
         bubble1.addClass("bubble_highlight");
         slide_action('.bg2', '.bg1');
         $('.tech1').css('color', '#A42327');
@@ -127,8 +127,8 @@ function slide(slide) {
         },500)
     }
     if (slide == 2) {
-        skills_bg.removeClass("red-bg");
         skills_bg.addClass("blue-bg");
+        skills_bg.removeClass("red-bg");
         bubble2.addClass("bubble_highlight");
         slide_action('.bg1', '.bg2');
         $('.tech1').css('color', '#00CEE0');
