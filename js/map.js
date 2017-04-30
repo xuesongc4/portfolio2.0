@@ -275,7 +275,7 @@ function initMap() {
     var home = {lat: 34.05, lng: -118.4};
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 11,
-        center: {lat: 33.9, lng: -118.6}
+        center: {lat: 33.95, lng: -118.5}
     });
     var marker = new google.maps.Marker({
         position: home,
