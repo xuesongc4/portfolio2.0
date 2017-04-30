@@ -228,7 +228,10 @@
         height: 180px;
         width: 180px;
     }
-
+    .cube_container{
+        height: 180px;
+        width: 180px;
+    }
     #cube .front {
         transform: rotateY(0deg) translateZ(150px)
     }
