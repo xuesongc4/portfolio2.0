@@ -5,10 +5,12 @@
 .page{
     height: 960px;
     width: 100vw;
+    overflow: hidden;
 }
 .page2{
     width: 100vw;
     height: 860px;
+    overflow: hidden;
 }
 
 #home-section{
