@@ -31,7 +31,8 @@ if(!$mail->send()) {
     print_r('Message could not be sent.');
     print_r('Mailer Error: ' . $mail->ErrorInfo);
 } else {
-    print_r ('Message has been sent');
+    header('Location: thankyou.html');
+    exit();
 }
 print_r(error_get_last());
 ?>
