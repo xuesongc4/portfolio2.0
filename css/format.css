@@ -4,9 +4,10 @@
 body{
     margin: 0;
     font-size: 0;
+    overflow-x: hidden;
     font-family: 'Montserrat', sans-serif;
-    overflow: hidden;
 }
+
 h2{
     color: white;
     font-size: 50px;
