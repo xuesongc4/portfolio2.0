@@ -2,7 +2,7 @@
 require_once('email_config.php');
 require('PHPMailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
-$mail->SMTPDebug = 3;                               // Enable verbose debug output
+$mail->SMTPDebug = 0;                               // Enable verbose debug output
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
@@ -31,7 +31,8 @@ if(!$mail->send()) {
     print_r('Message could not be sent.');
     print_r('Mailer Error: ' . $mail->ErrorInfo);
 } else {
-    print_r ('Message has been sent');
+    header('Location: thankyou.html');
+    exit();
 }
 print_r(error_get_last());
 ?>
