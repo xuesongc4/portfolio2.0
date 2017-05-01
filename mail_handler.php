@@ -2,8 +2,8 @@
 require_once('email_config.php');
 require('PHPMailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
-$mail->SMTPDebug = 3;                               // Enable verbose debug output
-//$mail->isSMTP();                                      // Set mailer to use SMTP
+//$mail->SMTPDebug = 3;                               // Enable verbose debug output
+$mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
 $mail->Username = EMAIL_USER;                 // SMTP username
@@ -27,12 +27,10 @@ $mail->isHTML(true);                                  // Set email format to HTM
 $mail->Subject = "Message from jchen4.com";
 $mail->Body    = $_POST['body'];
 //$mail->AltBody = $_POST[''];
+$res = ['success' => true];
 if(!$mail->send()) {
-    print_r('Message could not be sent.');
-    print_r('Mailer Error: ' . $mail->ErrorInfo);
-} else {
-    header('Location: thankyou.html');
-    exit();
+    $res['success'] = false;
+    $res['error'] = 'Mailer Error: ' . $mail->ErrorInfo;
 }
-print_r(error_get_last());
+print(json_encode($res));
 ?>
