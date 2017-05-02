@@ -140,14 +140,14 @@ function slide(slide) {
 }
 
 function slide_action(slide_off, slide_on) {
-    $(slide_off).addClass("slide_off");
-    $(slide_on).removeClass("slide_on");
     setTimeout(function () {
         $(slide_on).addClass("zindex");
         $(slide_off).removeClass("zindex");
         $(slide_off).removeClass("slide_off");
         $(slide_off).addClass("slide_on");
     }, 500);
+    $(slide_off).addClass("slide_off");
+    $(slide_on).removeClass("slide_on");
 }
 
 function flip(side) {
