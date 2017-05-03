@@ -44,7 +44,6 @@ function send_email(e) {
 }
 
 function loader(state){
-function loader(state){
     if(state == "start"){
         $(".loader").show();
         $(".send").hide();
