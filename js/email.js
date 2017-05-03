@@ -19,7 +19,7 @@ function send_email(e) {
     }
 
     if(data.name.length < 2){
-        message.show().append("- Name must be atleast 2 characters<br>");
+        message.show().append("- Name must be at least 2 characters<br>");
         name_flag=false;
         loader("stop");
     }
@@ -44,7 +44,7 @@ function send_email(e) {
 }
 
 function loader(state){
-    console.log("loader doing something:"+state);
+function loader(state){
     if(state == "start"){
         $(".loader").show();
         $(".send").hide();
