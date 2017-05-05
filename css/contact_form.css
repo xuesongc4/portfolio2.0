@@ -172,6 +172,7 @@
     }
     .contact-form{
         top:110px;
+        width: 85%;
     }
     .contact-form .me-container img{
         height: 75px;
@@ -184,8 +185,7 @@
 @media only screen
 and (min-device-width : 414px)
 and (max-device-width : 736px)
-and (orientation : landscape)
-{
+and (orientation : landscape) {
     .contact-form{
         top:100px;
     }
@@ -223,8 +223,7 @@ and (orientation : landscape)
 @media only screen
 and (min-device-width : 375px)
 and (max-device-width : 667px)
-and (orientation : landscape)
-{
+and (orientation : landscape) {
     .contact-form{
         top:65px;
     }
