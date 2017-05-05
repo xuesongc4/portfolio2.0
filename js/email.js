@@ -4,6 +4,7 @@ function send_email(e) {
     var message = $(".send-message");
     var email_flag=true;
     var name_flag=true;
+    var message_flag=true;
     var data = {
         name: $('input[name="name"]').val(),
         email: $('input[name="email"]').val(),
@@ -23,7 +24,12 @@ function send_email(e) {
         name_flag=false;
         loader("stop");
     }
-    if(email_flag && name_flag){
+    if(data.body.length == 0){
+        message.show().append("- Please send a message<br>");
+        name_flag=false;
+        loader("stop");
+    }
+    if(email_flag && name_flag && message_flag){
         $.ajax({
             url: 'mail_handler.php',
             method: 'POST',
