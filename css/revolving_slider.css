@@ -208,6 +208,22 @@
     margin-top: -1px !important;
 }
 
+
+@media only screen and (max-height: 800px){
+    .skills_picture_container{
+        display:none
+    }
+    #skills-area .skills-container .bg2{
+        width: 100%;
+    }
+    #skills-area .skills-container .bg1{
+        width: 100%;
+    }
+}
+
+
+
+
 @media only screen and (max-width: 1600px){
     .skills_picture_container{
         display:none
