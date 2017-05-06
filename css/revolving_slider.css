@@ -235,9 +235,13 @@
         width: 100%;
     }
 }
+@media only screen and (max-height: 700px) {
+    .skills_bg .skills_info{
+        font-size:18px;
+    }
+}
 
-
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px),(max-height: 700px) {
     #skill-section h2{
         font-size: 40px;
     }
