@@ -208,7 +208,8 @@
     margin-top: -1px !important;
 }
 
-@media only screen and (max-width: 1600px){
+
+@media only screen and (max-height: 800px){
     .skills_picture_container{
         display:none
     }
@@ -221,7 +222,26 @@
 }
 
 
-@media only screen and (max-width: 1024px) {
+
+
+@media only screen and (max-width: 1600px){
+    .skills_picture_container{
+        display:none
+    }
+    #skills-area .skills-container .bg2{
+        width: 100%;
+    }
+    #skills-area .skills-container .bg1{
+        width: 100%;
+    }
+}
+@media only screen and (max-height: 700px) {
+    .skills_bg .skills_info{
+        font-size:18px;
+    }
+}
+
+@media only screen and (max-width: 1024px),(max-height: 700px) {
     #skill-section h2{
         font-size: 40px;
     }

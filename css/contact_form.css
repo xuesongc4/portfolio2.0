@@ -117,13 +117,26 @@
     font-size: 16px;
 }
 
+@media only screen and (max-height: 800px){
+    .skills_picture_container{
+        display:none
+    }
+    #skills-area .skills-container .bg2{
+        width: 100%;
+    }
+    #skills-area .skills-container .bg1{
+        width: 100%;
+    }
+}
+
+
 @-webkit-keyframes rotate {
     100% {
         transform: rotate(36000deg);
     }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px),(max-height: 900px){
     .contact-form-container{
         width: 75%;
     }
@@ -166,7 +179,7 @@
     }
 }
 
-@media only screen and (max-width: 726px) {
+@media only screen and (max-width: 726px),(max-height:700px) {
     .contact-form .page_title{
         font-size: 22px;
     }
