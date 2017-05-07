@@ -230,9 +230,12 @@ footer .container .row .resume a {
     #home-section .logo-container{
        width: 30%;
     }
+    footer{
+        font-size: 22px;
+    }
 }
 
-@media only screen and (max-width: 726px){
+@media only screen and (max-width: 736px){
     #home-section .nav-buttons, #home-section #pop-nav{
         display: none;
     }
@@ -243,11 +246,19 @@ footer .container .row .resume a {
     #home-section .logo-c{
         font-size: 31px;
     }
-    .resume{
-        display: none;
-    }
     footer{
         font-size: 16px;
         height: 90px;
     }
+    .social{
+        margin:5px 0;
+    }
+    footer .container .row .resume{
+        display: block;
+        position: static;
+        padding-left: 50px;
+        padding-bottom: 10px;
+    }
 }
+
+
