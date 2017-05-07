@@ -218,15 +218,11 @@ and (orientation : landscape) {
         height: 18px;
         margin-bottom: 10px;
     }
-    .resume{
-        display: none;
-    }
     .contact-form .submit{
         padding: 5px 50px;
     }
     footer{
         font-size: 16px;
-        height: 60px;
     }
     ul.social{
         margin-top: 5px;
@@ -258,15 +254,11 @@ and (orientation : landscape) {
         margin-bottom: 10px;
         font-size: 12px;
     }
-    .resume{
-        display: none;
-    }
     .contact-form .submit{
         padding: 5px 50px;
     }
     footer{
         font-size: 16px;
-        height: 60px;
     }
     ul.social{
         margin-top: 5px;

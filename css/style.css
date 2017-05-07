@@ -407,6 +407,9 @@ and (-webkit-min-device-pixel-ratio: 3){
     .skills-container .tracker{
         bottom: 0;
     }
+    .page2{
+        height: 87vh;
+    }
 }
 
 @media only screen
@@ -512,6 +515,9 @@ and (orientation : landscape){
     }
     .skills-container .tracker{
         bottom: 0;
+    }
+    .page2{
+        height: 82vh;
     }
 }
 
