@@ -83,10 +83,6 @@ function close_info(){
     var back = $("#cube .back");
     var left = $("#cube .left");
 
-    cube.removeClass("show-front");
-    cube.removeClass("show-left");
-    cube.removeClass("show-back");
-    cube.removeClass("show-right");
     $("#info").slideUp();
     $(".side1").hide();
     $(".side2").hide();
