@@ -295,3 +295,13 @@
         transform: rotateY(-90deg) translateZ(550px) !important;
     }
 }
+
+
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : landscape) {
+    #app-section .cube{
+        top:60px;
+    }
+}
