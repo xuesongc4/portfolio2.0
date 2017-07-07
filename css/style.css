@@ -19,7 +19,7 @@
 }
 
 #app-section{
-    background:url('../../pres/images/galaxy3.jpg')#FFFFFF no-repeat bottom center fixed;
+    background:url('../images/backgrounds/galaxy3.jpg')#FFFFFF no-repeat bottom center fixed;
     position: relative;
     background-color: black;
 }
