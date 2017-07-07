@@ -272,7 +272,7 @@ function initMap() {
         ]
         , {name: 'Styled Map'});
 
-    var home = {lat: 34.0, lng: -118.5};
+    var home = {lat: 34.058, lng: -118.44};
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 11,
         center: {lat: 33.95, lng: -118.6},
