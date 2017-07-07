@@ -29,7 +29,7 @@
 #skills-area .skills-container .bg2{
     width: 50%;
     height: 100%;
-    background: url("../../pres/images/coding2.jpg") center center no-repeat;
+    background: url("../images/backgrounds/coding2.jpg") center center no-repeat;
     background-size: cover;
     position: absolute;
     top:0;
