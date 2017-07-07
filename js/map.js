@@ -272,10 +272,10 @@ function initMap() {
         ]
         , {name: 'Styled Map'});
 
-    var home = {lat: 34.05, lng: -118.4};
+    var home = {lat: 34.1, lng: -118.4};
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 11,
-        center: {lat: 33.95, lng: -118.5},
+        center: {lat: 33.95, lng: -118.6},
         disableDefaultUI: true
     });
     var marker = new google.maps.Marker({
